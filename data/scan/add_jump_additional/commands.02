@@ -1,0 +1,3 @@
+IN: jump opposite right twice after walk opposite left OUT: I_TURN_LEFT I_TURN_LEFT I_WALK I_TURN_RIGHT I_TURN_RIGHT I_JUMP I_TURN_RIGHT I_TURN_RIGHT I_JUMP
+IN: jump twice and run opposite right twice OUT: I_JUMP I_JUMP I_TURN_RIGHT I_TURN_RIGHT I_RUN I_TURN_RIGHT I_TURN_RIGHT I_RUN
+IN: jump OUT: I_JUMP

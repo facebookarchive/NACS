@@ -1,0 +1,1191 @@
+IN: you are daxy . OUT: tu es daxiste .
+IN: he is daxy . OUT: il est daxiste .
+IN: i am not daxy . OUT: je ne suis pas daxiste .
+IN: you are not daxy . OUT: tu n es pas daxiste .
+IN: he is not daxy . OUT: il n est pas daxiste .
+IN: i am very daxy . OUT: je suis tres daxiste .
+IN: you are very daxy . OUT: tu es tres daxiste .
+IN: he is very daxy . OUT: il est tres daxiste .
+IN: i m ill . OUT: je suis malade .
+IN: he s wet . OUT: il est mouille .
+IN: i m back . OUT: je suis revenu .
+IN: i m back . OUT: me revoila .
+IN: i m free . OUT: je suis libre .
+IN: i m free . OUT: je suis disponible .
+IN: i am busy . OUT: je suis occupe .
+IN: i m awake . OUT: je suis reveille .
+IN: i m lucky . OUT: je suis veinard .
+IN: i m lucky . OUT: je suis veinarde .
+IN: i m lucky . OUT: j ai du pot .
+IN: i m lucky . OUT: je suis chanceux .
+IN: i m lucky . OUT: je suis chanceuse .
+IN: i m quiet . OUT: je suis tranquille .
+IN: i m sober . OUT: je suis sobre .
+IN: we re sad . OUT: nous sommes tristes .
+IN: i m famous . OUT: je suis connu .
+IN: i m famous . OUT: je suis connue .
+IN: i m faster . OUT: je suis plus rapide .
+IN: i m flabby . OUT: je suis flasque .
+IN: i m strict . OUT: je suis strict .
+IN: i m strict . OUT: je suis stricte .
+IN: we re lost . OUT: nous sommes perdus .
+IN: we re lost . OUT: nous sommes perdues .
+IN: we re safe . OUT: nous sommes en securite .
+IN: i am hungry . OUT: j ai faim !
+IN: i m blessed . OUT: je suis beni .
+IN: i m blessed . OUT: je suis benie .
+IN: i m fasting . OUT: je fais la diete .
+IN: i m fasting . OUT: je suis a la diete .
+IN: i m finicky . OUT: je suis meticuleux .
+IN: i m finicky . OUT: je suis meticuleuse .
+IN: i m not old . OUT: je ne suis pas vieux .
+IN: i m not old . OUT: je ne suis pas vieille .
+IN: i m starved . OUT: je meurs de faim !
+IN: i m starved . OUT: j ai l estomac dans les talons .
+IN: i m starved . OUT: j ai la dalle .
+IN: i m starved . OUT: j ai les crocs .
+IN: i m thirsty . OUT: j ai soif .
+IN: we are late . OUT: nous sommes en retard .
+IN: we re saved . OUT: nous sommes sauves .
+IN: we re saved . OUT: nous sommes sauvees .
+IN: he s a bigot . OUT: c est un bigot .
+IN: he s a bigot . OUT: c est un sectaire .
+IN: he s a bigot . OUT: c est un fanatique .
+IN: he s a bigot . OUT: c est un illumine .
+IN: i am ashamed . OUT: j ai honte .
+IN: i m a genius . OUT: je suis un genie .
+IN: i m a purist . OUT: je suis un puriste .
+IN: i m confused . OUT: je me melange les pinceaux .
+IN: i m fighting . OUT: je me bats .
+IN: i m finished . OUT: j ai termine .
+IN: i m finished . OUT: j en ai termine .
+IN: i m free now . OUT: je suis libre maintenant .
+IN: i m not evil . OUT: je ne suis pas mauvais .
+IN: i m rational . OUT: je suis rationnel .
+IN: i m rational . OUT: je suis rationnelle .
+IN: i m sleeping . OUT: je suis en train de dormir .
+IN: i m worn out . OUT: je suis epuise .
+IN: they re back . OUT: ils sont de retour .
+IN: they re back . OUT: elles sont de retour .
+IN: they re cute . OUT: ils sont mignons .
+IN: they re cute . OUT: elles sont mignonnes .
+IN: we re biased . OUT: notre point de vue est biaise .
+IN: we re biased . OUT: nous avons des prejuges .
+IN: we re joking . OUT: nous plaisantons .
+IN: we re trying . OUT: nous essayons .
+IN: you re fired . OUT: tu es vire .
+IN: you re fired . OUT: tu es licencie .
+IN: you re stuck . OUT: t es plante .
+IN: you re stuck . OUT: t es plantee .
+IN: you re stuck . OUT: vous etes plantes .
+IN: you re stuck . OUT: vous etes plantees .
+IN: you re stuck . OUT: vous etes plantee .
+IN: you re stuck . OUT: vous etes plante .
+IN: he is skating . OUT: il fait du patin .
+IN: he is skating . OUT: il patine .
+IN: he s not home . OUT: il n est pas a la maison .
+IN: he s not sick . OUT: il n est pas malade .
+IN: he s too slow . OUT: il est trop lent .
+IN: i m a teacher . OUT: je suis professeur .
+IN: i m a teacher . OUT: je suis enseignante .
+IN: i m afraid so . OUT: j en ai peur .
+IN: i m beautiful . OUT: je suis belle .
+IN: i m beautiful . OUT: je suis beau .
+IN: i m convinced . OUT: j en suis convaincu .
+IN: i m not a cop . OUT: je ne suis pas flic .
+IN: i m not naive . OUT: je ne suis pas naif .
+IN: i m not naive . OUT: je ne suis pas naive .
+IN: i m not tired . OUT: je ne suis pas fatigue .
+IN: i m not tired . OUT: je ne suis pas fatiguee .
+IN: i m on a diet . OUT: je suis au regime .
+IN: i m realistic . OUT: je suis realiste .
+IN: i m resentful . OUT: j eprouve du ressentiment .
+IN: i m so lonely . OUT: je suis si seul .
+IN: i m so lonely . OUT: je suis si seule .
+IN: i m very cold . OUT: j ai tres froid .
+IN: she is french . OUT: elle est francaise .
+IN: she s my type . OUT: elle est mon genre .
+IN: they are here . OUT: ils sont la .
+IN: they re wrong . OUT: ils ont tort !
+IN: we are at war . OUT: nous sommes en guerre .
+IN: we re careful . OUT: nous sommes prudents .
+IN: we re careful . OUT: nous sommes prudentes .
+IN: we re in sync . OUT: nous sommes synchronises .
+IN: we re in sync . OUT: nous sommes synchronisees .
+IN: we re sinking . OUT: nous coulons .
+IN: we re sinking . OUT: nous sommes en train de couler .
+IN: we re stunned . OUT: nous sommes sideres .
+IN: we re stunned . OUT: nous sommes siderees .
+IN: you re biased . OUT: tu es partiale .
+IN: you re biased . OUT: tu es partial .
+IN: you re greedy . OUT: tu es avide .
+IN: you re greedy . OUT: vous etes avide .
+IN: you re greedy . OUT: vous etes avides .
+IN: you re loaded . OUT: t es bourre .
+IN: you re loaded . OUT: t es bourree .
+IN: you re loaded . OUT: t es plein de fric .
+IN: you re loaded . OUT: t es pleine de fric .
+IN: you re losing . OUT: tu es en train de perdre .
+IN: you re losing . OUT: vous etes en train de perdre .
+IN: you re pretty . OUT: tu es jolie .
+IN: you re pretty . OUT: vous etes jolie .
+IN: you re unfair . OUT: tu es injuste .
+IN: he is well off . OUT: il est riche .
+IN: i am a tourist . OUT: je suis touriste .
+IN: i am after him . OUT: je suis apres lui .
+IN: i am an artist . OUT: je suis un artiste .
+IN: i am an artist . OUT: je suis une artiste .
+IN: i am not happy . OUT: je ne suis pas content .
+IN: i am not happy . OUT: je ne suis pas heureux .
+IN: i am not happy . OUT: je ne suis pas heureuse .
+IN: i am not happy . OUT: je ne suis pas contente .
+IN: i m a free man . OUT: je suis un homme libre .
+IN: i m a minister . OUT: je suis ministre .
+IN: i m contagious . OUT: je suis contagieux .
+IN: i m contagious . OUT: je suis contagieuse .
+IN: i m devastated . OUT: je suis aneanti .
+IN: i m devastated . OUT: je suis aneantie .
+IN: i m mad at you . OUT: je suis en colere apres toi .
+IN: i m mad at you . OUT: je suis en colere apres vous .
+IN: i m no quitter . OUT: je ne baisse pas facilement les bras .
+IN: i m no quitter . OUT: je n abandonne pas facilement .
+IN: i m no quitter . OUT: je n abandonne pas si facilement .
+IN: i m not skinny . OUT: je ne suis pas maigrichon .
+IN: i m not skinny . OUT: je ne suis pas maigrichonne .
+IN: i m prejudiced . OUT: j ai des prejuges .
+IN: she is awkward . OUT: elle est maladroite .
+IN: she is dieting . OUT: elle est au regime .
+IN: she seems rich . OUT: elle semble riche .
+IN: she s demented . OUT: elle est folle .
+IN: we re finished . OUT: nous avons fini .
+IN: we re finished . OUT: nous avons termine .
+IN: we re finished . OUT: nous en avons fini .
+IN: we re finished . OUT: nous en avons termine .
+IN: we re grateful . OUT: nous sommes reconnaissants .
+IN: we re grateful . OUT: nous sommes reconnaissantes .
+IN: we re not rich . OUT: nous ne sommes pas riches .
+IN: we re so sorry . OUT: nous sommes tellement desoles .
+IN: we re too busy . OUT: nous sommes trop occupes .
+IN: we re too busy . OUT: nous sommes trop occupees .
+IN: you re all mad . OUT: vous etes tous fous .
+IN: you re all mad . OUT: vous etes toutes folles .
+IN: you re awesome . OUT: tu es genial .
+IN: you re awesome . OUT: vous etes genial .
+IN: you re awesome . OUT: tu es geniale .
+IN: you re awesome . OUT: vous etes geniale .
+IN: you re psyched . OUT: t es remonte .
+IN: you re psyched . OUT: t es remontee .
+IN: he is a teacher . OUT: il est enseignant .
+IN: he is a teacher . OUT: il est instituteur .
+IN: he is depressed . OUT: il est deprime .
+IN: he is unmarried . OUT: il n est pas marie .
+IN: he is unmarried . OUT: il est celibataire .
+IN: he s a bad liar . OUT: il ment mal .
+IN: he s a frat boy . OUT: il est membre d une fraternite etudiante .
+IN: he s a slowpoke . OUT: c est un lambin .
+IN: he s a slowpoke . OUT: c est un lourdaud .
+IN: he s on his way . OUT: il est en route .
+IN: he s on his way . OUT: il est en chemin .
+IN: i am busy today . OUT: je suis occupe aujourd hui .
+IN: i am not eating . OUT: je ne suis pas en train de manger .
+IN: i m a tv addict . OUT: je suis accro a la tele .
+IN: i m a bit tired . OUT: je suis un peu fatigue .
+IN: i m a happy man . OUT: je suis un homme heureux .
+IN: i m catching on . OUT: je capte .
+IN: i m catching on . OUT: je comprends .
+IN: i m comfortable . OUT: je suis a mon aise .
+IN: i m from turkey . OUT: je viens de turquie .
+IN: i m interfering . OUT: je derange .
+IN: i m introverted . OUT: je suis introverti .
+IN: i m introverted . OUT: je suis introvertie .
+IN: i m not a saint . OUT: je ne suis pas un saint .
+IN: i m not a saint . OUT: je ne suis pas une sainte .
+IN: i m not a thief . OUT: je ne suis pas un voleur .
+IN: i m not a thief . OUT: je ne suis pas une voleuse .
+IN: i m not leaving . OUT: je ne m en vais pas .
+IN: i m on vacation . OUT: je suis en vacances .
+IN: i m persevering . OUT: je persevere .
+IN: i m quite happy . OUT: je suis assez heureux .
+IN: i m quite happy . OUT: je suis assez heureuse .
+IN: i m very sleepy . OUT: j ai tres sommeil .
+IN: she is stubborn . OUT: elle est obstinee .
+IN: she s in danger . OUT: elle est en danger .
+IN: we re available . OUT: nous sommes disponibles .
+IN: we re in charge . OUT: nous sommes en charge .
+IN: we re in charge . OUT: c est nous qui dirigeons .
+IN: we re resigning . OUT: nous demissionnons .
+IN: we re survivors . OUT: nous sommes des survivants .
+IN: we re survivors . OUT: nous sommes des survivantes .
+IN: we re too close . OUT: nos scores sont trop serres .
+IN: we re too close . OUT: nous sommes trop proches .
+IN: we re very busy . OUT: nous sommes tres occupes .
+IN: we re very busy . OUT: nous sommes fort occupes .
+IN: we re very busy . OUT: nous sommes tres occupees .
+IN: you re creative . OUT: tu es creatif .
+IN: you re creative . OUT: tu es creative .
+IN: you re creative . OUT: vous etes creatif .
+IN: you re creative . OUT: vous etes creative .
+IN: you re creative . OUT: vous etes creatifs .
+IN: you re creative . OUT: vous etes creatives .
+IN: you re disloyal . OUT: vous etes deloyal .
+IN: you re disloyal . OUT: tu es deloyal .
+IN: you re disloyal . OUT: tu es deloyale .
+IN: you re disloyal . OUT: vous etes deloyales .
+IN: you re disloyal . OUT: vous etes deloyale .
+IN: you re disloyal . OUT: vous etes deloyaux .
+IN: you re forgiven . OUT: tu es excuse .
+IN: you re forgiven . OUT: tu es pardonne .
+IN: you re forgiven . OUT: tu es pardonnee .
+IN: you re forgiven . OUT: vous etes pardonne .
+IN: you re forgiven . OUT: vous etes pardonnee .
+IN: you re forgiven . OUT: vous etes pardonnes .
+IN: you re forgiven . OUT: vous etes pardonnees .
+IN: you re not sick . OUT: tu n es pas malade .
+IN: you re not sick . OUT: vous n etes pas malade .
+IN: you re not sick . OUT: vous n etes pas malades .
+IN: you re pathetic . OUT: tu es pathetique .
+IN: you re pathetic . OUT: vous etes pathetique .
+IN: you re pathetic . OUT: vous etes pathetiques .
+IN: you re ruthless . OUT: tu es sans pitie .
+IN: you re ruthless . OUT: vous etes sans pitie .
+IN: you re so picky . OUT: tu es tellement difficile !
+IN: you re so picky . OUT: vous etes tellement difficile !
+IN: you re so picky . OUT: vous etes tellement difficiles !
+IN: you re too loud . OUT: vous etes trop bruyant .
+IN: you re too loud . OUT: vous etes trop bruyante .
+IN: you re too loud . OUT: vous etes trop bruyants .
+IN: you re too loud . OUT: vous etes trop bruyantes .
+IN: you re too loud . OUT: tu es trop bruyant .
+IN: you re too loud . OUT: tu es trop bruyante .
+IN: he is her friend . OUT: il est son ami .
+IN: he is in trouble . OUT: il a des soucis .
+IN: he is in trouble . OUT: il a des problemes .
+IN: he is in trouble . OUT: il a des ennuis .
+IN: he is very angry . OUT: il est tres en colere .
+IN: he is very angry . OUT: il est fort en colere .
+IN: he s a sophomore . OUT: c est un etudiant de deuxieme annee .
+IN: he s not at home . OUT: il n est pas chez lui .
+IN: he s not at home . OUT: il n est pas a la maison .
+IN: he s not my type . OUT: il n est pas mon genre .
+IN: he s not perfect . OUT: il n est pas parfait .
+IN: i am a bit drunk . OUT: je suis un peu ivre .
+IN: i am dumbfounded . OUT: je suis sidere .
+IN: i am on duty now . OUT: maintenant je suis en service .
+IN: i am on duty now . OUT: je suis actuellement en service .
+IN: i am truly sorry . OUT: je suis vraiment desole .
+IN: i am truly sorry . OUT: je suis vraiment desolee .
+IN: i m always moody . OUT: je suis toujours de mauvaise humeur .
+IN: i m feeling good . OUT: je me sens bien .
+IN: i m from america . OUT: je viens d amerique .
+IN: i m not blushing ! OUT: je ne rougis pas !
+IN: i m not done yet . OUT: je n en ai pas encore fini .
+IN: i m not done yet . OUT: je n en ai pas encore termine .
+IN: i m not dreaming . OUT: je ne suis pas en train de rever .
+IN: i m very serious . OUT: je suis tres serieux .
+IN: i m very serious . OUT: je suis tres serieuse .
+IN: i m very thirsty . OUT: j ai tres soif .
+IN: i m very thirsty . OUT: je meurs de soif .
+IN: i m your brother . OUT: je suis ton frere .
+IN: she spoke wisely . OUT: elle a parle avec sagesse .
+IN: they re students . OUT: ce sont des etudiants .
+IN: they re students . OUT: ce sont des etudiantes .
+IN: they re students . OUT: ce sont des eleves .
+IN: they re students . OUT: elles sont etudiantes .
+IN: they re students . OUT: ils sont etudiants .
+IN: we re doing well . OUT: nous nous en sortons pas mal .
+IN: we re getting it . OUT: nous pigeons .
+IN: we re in trouble . OUT: nous sommes dans le petrin .
+IN: we re in trouble . OUT: on est dans le petrin .
+IN: we re not needed . OUT: on n a pas besoin de nous .
+IN: we re speechless . OUT: nous sommes sans voix .
+IN: we re still here . OUT: nous sommes encore ici .
+IN: we re very close . OUT: nos scores sont tres serres .
+IN: we re very close . OUT: nous sommes tres proches .
+IN: you are a doctor . OUT: vous etes medecin .
+IN: you are a doctor . OUT: tu es toubib .
+IN: you are children . OUT: vous etes des enfants .
+IN: you are deranged . OUT: tu es derange .
+IN: you re not dying . OUT: vous n etes pas mourant .
+IN: you re very tall . OUT: tu es tres grand .
+IN: you re very tall . OUT: tu es tres grande .
+IN: you re very tall . OUT: vous etes tres grand .
+IN: you re very tall . OUT: vous etes tres grande .
+IN: you re very tall . OUT: vous etes tres grands .
+IN: you re very tall . OUT: vous etes tres grandes .
+IN: you re very wise . OUT: tu es tres sage .
+IN: you re very wise . OUT: tu es tres avise .
+IN: you re very wise . OUT: tu es fort avise .
+IN: you re very wise . OUT: tu es tres avisee .
+IN: you re very wise . OUT: tu es fort avisee .
+IN: you re very wise . OUT: tu es fort sage .
+IN: you re very wise . OUT: vous etes tres sage .
+IN: you re very wise . OUT: vous etes fort sage .
+IN: you re very wise . OUT: vous etes tres sages .
+IN: you re very wise . OUT: vous etes fort sages .
+IN: you re very wise . OUT: vous etes tres avise .
+IN: you re very wise . OUT: vous etes tres avisee .
+IN: you re very wise . OUT: vous etes tres avises .
+IN: you re very wise . OUT: vous etes tres avisees .
+IN: you re very wise . OUT: vous etes fort avise .
+IN: you re very wise . OUT: vous etes fort avisee .
+IN: you re very wise . OUT: vous etes fort avises .
+IN: you re very wise . OUT: vous etes fort avisees .
+IN: he is about forty . OUT: il doit avoir la quarantaine .
+IN: he is an evil man . OUT: c est un mechant homme .
+IN: he is not married . OUT: il n est pas marie .
+IN: he is quite right . OUT: il a plutot raison .
+IN: he isn t here now . OUT: il n est pas la en ce moment .
+IN: he isn t here now . OUT: il n est pas la actuellement .
+IN: he s a movie buff . OUT: c est un mordu de cinema .
+IN: he s already left . OUT: il est deja parti .
+IN: he s already left . OUT: il s en est deja alle .
+IN: he s an old timer . OUT: c est un vieux de la vieille .
+IN: he s very curious . OUT: il est tres curieux .
+IN: i am a bad person . OUT: je suis un etre mauvais .
+IN: i m a total wreck . OUT: je suis une vraie loque .
+IN: i m happy with it . OUT: j en suis heureux .
+IN: i m happy with it . OUT: je m en contente .
+IN: i m not a psychic . OUT: je ne pratique pas la divination .
+IN: i m not a psychic . OUT: je ne suis pas devin .
+IN: i m not a psychic . OUT: je ne suis pas telepathe .
+IN: i m not available . OUT: je ne suis pas disponible .
+IN: i m not available . OUT: je suis indisponible .
+IN: i m not like that . OUT: je ne suis pas comme ca .
+IN: i m not very busy . OUT: je ne suis pas tres occupe .
+IN: i m not very busy . OUT: je ne suis pas tres occupee .
+IN: i m not your maid . OUT: je ne suis pas ta servante .
+IN: i m not your maid . OUT: je ne suis pas votre servante .
+IN: i m not your maid . OUT: je ne suis pas ta bonne .
+IN: i m not your maid . OUT: je ne suis pas votre bonne .
+IN: she is a beginner . OUT: elle est debutante .
+IN: she is a beginner . OUT: elle est novice .
+IN: she s still young . OUT: elle est encore jeune .
+IN: they are very big . OUT: ils sont tres gros .
+IN: they are very big . OUT: ils sont tres grands .
+IN: they are very big . OUT: elles sont tres grosses .
+IN: they are very big . OUT: elles sont tres grandes .
+IN: they are very big . OUT: elles sont tres massives .
+IN: they are very big . OUT: ils sont tres massifs .
+IN: they re nice guys . OUT: ce sont de chics types .
+IN: we are australian . OUT: nous sommes australiens .
+IN: we are australian . OUT: nous sommes australiennes .
+IN: we are classmates . OUT: nous sommes camarades de classe .
+IN: we re all friends . OUT: nous sommes tous amis .
+IN: we re experienced . OUT: nous avons de l experience .
+IN: we re experienced . OUT: nous disposons d experience .
+IN: we re interfering . OUT: nous derangeons .
+IN: we re not cowards . OUT: nous ne sommes pas des laches .
+IN: we re not dressed . OUT: nous ne sommes pas habilles .
+IN: we re not dressed . OUT: nous ne sommes pas habillees .
+IN: we re not invited . OUT: nous ne sommes pas invites .
+IN: we re not invited . OUT: nous ne sommes pas invitees .
+IN: we re really late . OUT: nous sommes tres en retard .
+IN: you are beautiful . OUT: tu es beau .
+IN: you are beautiful . OUT: tu es belle .
+IN: you are beautiful . OUT: vous etes beau .
+IN: you are beautiful . OUT: vous etes belle .
+IN: you are beautiful . OUT: vous etes beaux .
+IN: you are beautiful . OUT: vous etes belles .
+IN: you re the owners . OUT: vous etes les proprietaires .
+IN: you re the owners . OUT: c est vous les proprietaires .
+IN: you re very sharp . OUT: tu es tres vif .
+IN: you re very sharp . OUT: tu es tres vive .
+IN: you re very sharp . OUT: vous etes tres vif .
+IN: you re very sharp . OUT: vous etes tres vifs .
+IN: you re very sharp . OUT: vous etes tres vive .
+IN: you re very sharp . OUT: vous etes tres vives .
+IN: he is a bad person . OUT: c est une mauvaise personne .
+IN: he is a fishmonger . OUT: il est poissonnier .
+IN: he is all but dead . OUT: il est tout sauf mort .
+IN: he is no gentleman . OUT: ce n est pas un gentleman .
+IN: he is only a child . OUT: il n est qu un enfant .
+IN: he is very careful . OUT: il est tres prudent .
+IN: he is very careful . OUT: il est tres soigneux .
+IN: he s an englishman . OUT: il est anglais .
+IN: he s one of a kind . OUT: il est unique en son genre .
+IN: he s pushing fifty . OUT: il frole les cinquante ans .
+IN: he s still at work . OUT: il est encore au travail .
+IN: he s tall and slim . OUT: il est grand et mince .
+IN: he s the scapegoat . OUT: c est lui le bouc emissaire .
+IN: i am an only child . OUT: je suis enfant unique .
+IN: i m being punished . OUT: je suis puni .
+IN: i m being punished . OUT: je suis punie .
+IN: i m buying a puppy . OUT: j achete un chiot .
+IN: i m buying a puppy . OUT: je suis en train d acheter un chiot .
+IN: i m in good health . OUT: je suis en bonne sante .
+IN: i m just beginning . OUT: je commence a peine .
+IN: i m just beginning . OUT: je ne fais que commencer .
+IN: i m letting you go . OUT: je te vire .
+IN: i m letting you go . OUT: je vous vire .
+IN: i m letting you go . OUT: je te laisse partir .
+IN: i m letting you go . OUT: je vous laisse partir .
+IN: i m letting you go . OUT: je te libere .
+IN: i m letting you go . OUT: je vous libere .
+IN: i m not delusional . OUT: je ne souffre pas de lubies .
+IN: i m not hungry yet . OUT: je n ai pas encore faim .
+IN: i m not invincible . OUT: je ne suis pas invincible .
+IN: they are exhausted . OUT: elles sont crevees .
+IN: they are exhausted . OUT: ils sont extenues .
+IN: they are exhausted . OUT: elles sont extenuees .
+IN: they are too close . OUT: ils sont trop proches .
+IN: they re all normal . OUT: ils sont tous normaux .
+IN: they re all normal . OUT: elles sont toutes normales .
+IN: they re mad at you . OUT: ils sont en colere apres toi .
+IN: they re mad at you . OUT: ils sont en colere apres vous .
+IN: they re mad at you . OUT: elles sont en colere apres toi .
+IN: they re mad at you . OUT: elles sont en colere apres vous .
+IN: they re mad at you . OUT: elles sont furieuses apres vous .
+IN: they re mad at you . OUT: elles sont furieuses apres toi .
+IN: they re mad at you . OUT: ils sont furieux apres vous .
+IN: they re mad at you . OUT: ils sont furieux apres toi .
+IN: we re a big family . OUT: nous sommes une grande famille .
+IN: we re almost there . OUT: encore un petit effort .
+IN: we re almost there . OUT: nous y sommes presque .
+IN: we re almost there . OUT: nous y sommes bientot .
+IN: we re in a library . OUT: nous sommes dans une bibliotheque .
+IN: we re not involved . OUT: nous ne sommes pas impliques .
+IN: we re not involved . OUT: nous ne sommes pas impliquees .
+IN: we re running late . OUT: nous prenons du retard .
+IN: we re still active . OUT: nous sommes toujours actifs .
+IN: you re a funny gal . OUT: t es une drole de fille .
+IN: you re cooperating . OUT: vous cooperez .
+IN: you re pretty good . OUT: t es assez bon .
+IN: you re pretty good . OUT: t es assez bonne .
+IN: you re pretty good . OUT: vous etes plutot bon .
+IN: you re pretty good . OUT: vous etes plutot bonne .
+IN: you re pretty good . OUT: vous etes plutot bons .
+IN: you re pretty good . OUT: vous etes assez bonnes .
+IN: you re so pathetic . OUT: tu es si pitoyable .
+IN: you re so pathetic . OUT: vous etes si pathetique .
+IN: you re trustworthy . OUT: tu es fiable .
+IN: you re trustworthy . OUT: vous etes fiable .
+IN: you re trustworthy . OUT: vous etes fiables .
+IN: you re very lonely . OUT: tu es tres solitaire .
+IN: you re very lonely . OUT: tu es fort solitaire .
+IN: you re very lonely . OUT: vous etes tres solitaire .
+IN: you re very lonely . OUT: vous etes tres solitaires .
+IN: you re very lonely . OUT: vous etes fort solitaire .
+IN: you re very lonely . OUT: vous etes fort solitaires .
+IN: you re very pretty . OUT: tu es tres jolie .
+IN: he is a hard worker . OUT: c est un travailleur applique .
+IN: he is too sensitive . OUT: il est trop sensible .
+IN: he s a salesman too . OUT: il est aussi un vendeur .
+IN: he s afraid of dogs . OUT: il a peur des chiens .
+IN: he s doing it right . OUT: il le fait correctement .
+IN: he s doing it right . OUT: il le fait comme il faut .
+IN: i m a social worker . OUT: je suis un travailleur social .
+IN: i m a social worker . OUT: je suis une travailleuse sociale .
+IN: i m afraid of death . OUT: j ai peur de mourir .
+IN: i m at your service . OUT: je suis a votre service .
+IN: i m at your service . OUT: je suis a ton service .
+IN: i m leaving tonight . OUT: je pars ce soir .
+IN: i m not comfortable . OUT: je ne suis pas a l aise .
+IN: i m not coming back . OUT: je ne reviens pas .
+IN: i m not embarrassed . OUT: je ne suis pas embarrasse .
+IN: i m not embarrassed . OUT: je ne suis pas embarrassee .
+IN: i m not the problem . OUT: le probleme ce n est pas moi .
+IN: i m not the problem . OUT: ce n est pas moi le probleme .
+IN: i m right aren t i ? OUT: j ai raison non ?
+IN: i m stuck in my job . OUT: je suis coince dans mon boulot .
+IN: i m stuck in my job . OUT: je suis coincee dans mon boulot .
+IN: i m tired of boston . OUT: je suis las de boston .
+IN: i m tired of boston . OUT: je suis fatigue de boston .
+IN: i m tired of boston . OUT: je suis fatiguee de boston .
+IN: i m too old for you . OUT: je suis trop vieux pour vous .
+IN: i m too old for you . OUT: je suis trop vieux pour toi .
+IN: i m too old for you . OUT: je suis trop vieille pour vous .
+IN: i m too old for you . OUT: je suis trop vieille pour toi .
+IN: i m waiting my turn . OUT: j attends mon tour .
+IN: she is fond of cake . OUT: elle adore les gateaux .
+IN: she is not here yet . OUT: elle n est pas encore la .
+IN: she s a true artist . OUT: c est une veritable artiste .
+IN: she s my first love . OUT: elle est mon premier amour .
+IN: they are our guests . OUT: ils sont nos invites .
+IN: they are our guests . OUT: elles sont nos invitees .
+IN: they re here for me . OUT: ils sont la pour moi .
+IN: they re here for me . OUT: elles sont la pour moi .
+IN: they re ignoring me . OUT: ils ne me pretent pas attention .
+IN: we re getting close . OUT: nous nous approchons .
+IN: we re getting close . OUT: nous nous en approchons .
+IN: we re getting close . OUT: nous en approchons .
+IN: we re getting tired . OUT: nous commencons a fatiguer .
+IN: we re really scared . OUT: nous avons vraiment peur .
+IN: we re very grateful . OUT: nous sommes tres reconnaissants .
+IN: we re very grateful . OUT: nous sommes tres reconnaissantes .
+IN: you are such a liar ! OUT: tu es un de ces menteurs !
+IN: you are such a liar ! OUT: vous etes un de ces menteurs !
+IN: you are such a liar ! OUT: vous etes une de ces menteuses !
+IN: you are such a liar ! OUT: tu es une de ces menteuses !
+IN: you re irresistible . OUT: t es irresistible .
+IN: you re not dead yet . OUT: tu n es pas encore mort .
+IN: you re not dead yet . OUT: tu n es pas encore morte .
+IN: you re not dead yet . OUT: vous n etes pas encore mort .
+IN: you re not dead yet . OUT: vous n etes pas encore morte .
+IN: you re not dead yet . OUT: vous n etes pas encore morts .
+IN: you re not dead yet . OUT: vous n etes pas encore mortes .
+IN: you re off the hook . OUT: tu es tire d affaire .
+IN: you re off the hook . OUT: tu es tiree d affaire .
+IN: you re off the hook . OUT: vous etes tire d affaire .
+IN: you re off the hook . OUT: vous etes tirees d affaire .
+IN: you re off the hook . OUT: vous etes tires d affaire .
+IN: you re off the hook . OUT: vous etes tiree d affaire .
+IN: you re part of this . OUT: tu en fais partie .
+IN: you re part of this . OUT: vous en faites partie .
+IN: you re so impatient . OUT: tu es tellement impatient .
+IN: you re so impatient . OUT: tu es tellement impatiente .
+IN: you re so impatient . OUT: vous etes tellement impatient .
+IN: you re so impatient . OUT: vous etes tellement impatiente .
+IN: you re so impatient . OUT: vous etes tellement impatients .
+IN: you re so impatient . OUT: vous etes tellement impatientes .
+IN: you re the engineer . OUT: c est vous l ingenieur .
+IN: you re the engineer . OUT: c est toi l ingenieur .
+IN: you re with friends . OUT: tu es avec des amis .
+IN: you re with friends . OUT: tu es avec des amies .
+IN: you re with friends . OUT: vous etes avec des amis .
+IN: you re with friends . OUT: vous etes avec des amies .
+IN: he is a good swimmer . OUT: c est un bon nageur .
+IN: he is a handsome man . OUT: c est un bel homme .
+IN: he is his own master . OUT: il est son propre maitre .
+IN: he is in trouble now . OUT: il est dans le petrin .
+IN: he is very depressed . OUT: il est tres deprime .
+IN: he is very depressed . OUT: il est fort deprime .
+IN: he s a tennis player . OUT: il est joueur de tennis .
+IN: he s making progress . OUT: il fait des progres .
+IN: he s too old for you . OUT: il est trop vieux pour toi .
+IN: he s too old for you . OUT: il est trop vieux pour vous .
+IN: i am counting on you . OUT: je compte sur toi .
+IN: i am getting dressed . OUT: je me vets .
+IN: i am poor at drawing . OUT: je suis mauvais en dessin .
+IN: i m a complete idiot . OUT: je suis un idiot complet .
+IN: i m calling for help . OUT: j appelle de l aide .
+IN: i m checking options . OUT: je verifie les possibilites .
+IN: i m glad you met tom . OUT: je suis heureuse que tu aies rencontre tom .
+IN: i m no longer sleepy . OUT: je n ai plus sommeil .
+IN: i m not quitting now . OUT: je ne vais pas abandonner maintenant .
+IN: i m not sitting here . OUT: je ne vais pas m asseoir ici .
+IN: i m not your teacher . OUT: je ne suis pas ton professeur .
+IN: i m pressing charges . OUT: j engage des poursuites .
+IN: i m pressing charges . OUT: je suis en train d engager des poursuites .
+IN: i m right behind you . OUT: je suis juste derriere toi .
+IN: i m right behind you . OUT: je suis juste derriere vous .
+IN: i m right behind you . OUT: je me trouve juste derriere toi .
+IN: i m right behind you . OUT: je me trouve juste derriere vous .
+IN: i m shorter than him . OUT: je suis plus petit que lui .
+IN: i m shorter than you . OUT: je suis plus petit que toi .
+IN: i m shorter than you . OUT: je suis plus petite que vous .
+IN: i m shorter than you . OUT: je suis plus petit que vous .
+IN: i m totally confused . OUT: je suis completement embrouille .
+IN: i m totally confused . OUT: je suis completement embrouillee .
+IN: she is a good writer . OUT: elle est bon ecrivain .
+IN: she is bad at sports . OUT: elle n est pas bonne en sport .
+IN: she is wearing a hat . OUT: elle porte un chapeau .
+IN: she sent me a letter . OUT: elle m a envoye une lettre .
+IN: she s a quiet person . OUT: elle est d un naturel calme .
+IN: we are out of danger . OUT: nous sommes hors de danger .
+IN: we re being attacked . OUT: nous sommes attaques .
+IN: we re being attacked . OUT: nous sommes attaquees .
+IN: we re friends right ? OUT: on est potes hein ?
+IN: we re not evacuating . OUT: nous ne sommes pas en train d evacuer .
+IN: we re not interested . OUT: nous ne sommes pas interesses .
+IN: we re not interested . OUT: nous ne sommes pas interessees .
+IN: we re ready for this . OUT: nous y sommes prets .
+IN: we re ready for this . OUT: nous y sommes pretes .
+IN: you are not a coward . OUT: tu n es pas un lache .
+IN: you are not a coward . OUT: vous n etes pas un lache .
+IN: you re being watched . OUT: on te regarde .
+IN: you re not very tidy . OUT: vous n etes pas tres ordonne .
+IN: you re not very tidy . OUT: vous n etes pas tres ordonnee .
+IN: you re not very tidy . OUT: vous n etes pas tres ordonnes .
+IN: you re not very tidy . OUT: vous n etes pas tres ordonnees .
+IN: he is a man of wealth . OUT: c est un homme riche .
+IN: he is an army officer . OUT: il est officier de l armee .
+IN: he s done this before . OUT: il l a fait auparavant .
+IN: he s hungry for power . OUT: il a soif de pouvoir .
+IN: he s very intelligent . OUT: il est tres intelligent .
+IN: i m a very shy person . OUT: je suis une personne tres timide .
+IN: i m coming right home . OUT: j arrive juste chez moi .
+IN: i m coming right home . OUT: j arrive juste chez nous .
+IN: i m from tokyo japan . OUT: je viens de tokyo japon .
+IN: i m here as a tourist . OUT: je suis ici en tant que touriste .
+IN: i m not angry anymore . OUT: je n ai plus faim .
+IN: i m not giving up yet . OUT: je ne vais pas encore abandonner .
+IN: i m not on duty today . OUT: je ne suis pas en service aujourd hui .
+IN: i m not sure about it . OUT: je n en suis pas sur .
+IN: i m not sure about it . OUT: je n en suis pas sure .
+IN: i m not very athletic . OUT: je ne suis pas tres athletique .
+IN: i m playing a tv game . OUT: je joue a un jeu televise .
+IN: i m playing a tv game . OUT: je joue a un jeu sur console .
+IN: i m scared of heights . OUT: j ai peur de la hauteur .
+IN: i m swamped with work . OUT: je suis submerge de travail .
+IN: i m to blame not you . OUT: c est ma faute pas la tienne .
+IN: i m used to the noise . OUT: je suis habitue au bruit .
+IN: she is good at skiing . OUT: elle est bonne en ski .
+IN: she screamed for help . OUT: elle cria a l aide .
+IN: she screamed for help . OUT: elle hurla a l aide .
+IN: she sings out of tune . OUT: elle chante faux .
+IN: she s upset right now . OUT: elle est fachee la .
+IN: they re all terrified . OUT: ils sont tous terrifies .
+IN: they re all terrified . OUT: elles sont toutes terrifiees .
+IN: we are the new owners . OUT: nous sommes les nouveaux proprietaires .
+IN: we re completely lost . OUT: nous sommes completement egares .
+IN: we re completely lost . OUT: nous sommes completement egarees .
+IN: we re just practicing . OUT: nous ne faisons que nous exercer .
+IN: we re not going there . OUT: nous n y allons pas .
+IN: you are going too far . OUT: tu vas trop loin .
+IN: you re always singing . OUT: tu chantes tout le temps .
+IN: you re always singing . OUT: vous chantez tout le temps .
+IN: you re doing it wrong ! OUT: tu le fais de travers !
+IN: you re my kind of gal . OUT: t es mon type de gonzesse .
+IN: you re really awesome . OUT: tu es vraiment genial .
+IN: you re really awesome . OUT: tu es vraiment geniale .
+IN: you re really awesome . OUT: vous etes vraiment genial .
+IN: you re really awesome . OUT: vous etes vraiment geniale .
+IN: you re really awesome . OUT: vous etes vraiment geniales .
+IN: you re really awesome . OUT: vous etes vraiment geniaux .
+IN: you re too old for me . OUT: tu es trop vieux pour moi .
+IN: you re too old for me . OUT: tu es trop vieille pour moi .
+IN: you re too old for me . OUT: vous etes trop vieux pour moi .
+IN: you re too old for me . OUT: vous etes trop vieille pour moi .
+IN: you re too old for me . OUT: vous etes trop vieilles pour moi .
+IN: you re very observant . OUT: tu es tres observateur .
+IN: you re very observant . OUT: tu es tres observatrice .
+IN: you re very observant . OUT: vous etes tres observateur .
+IN: you re very observant . OUT: vous etes tres observateurs .
+IN: you re very observant . OUT: vous etes tres observatrice .
+IN: you re very observant . OUT: vous etes tres observatrices .
+IN: he is blind in one eye . OUT: il ne voit pas d un il .
+IN: he is blind in one eye . OUT: il est borgne .
+IN: he is tired of reading . OUT: il est fatigue de lire .
+IN: he is used to the work . OUT: il est habitue au travail .
+IN: he isn t alone anymore . OUT: il n est plus seul .
+IN: he s addicted to drugs . OUT: il est accroche aux medicaments .
+IN: he s leaning on a cane . OUT: il s appuie sur une canne .
+IN: he s still sick in bed . OUT: il est toujours cloue au lit .
+IN: i m a japanese teacher . OUT: je suis un professeur de japonais .
+IN: i m a japanese teacher . OUT: je suis enseignant en japonais .
+IN: i m a little skeptical . OUT: je suis un peu sceptique .
+IN: i m accustomed to this . OUT: j y suis habitue .
+IN: i m accustomed to this . OUT: j en suis familier .
+IN: i m at the airport now . OUT: je suis maintenant a l aeroport .
+IN: i m aware of the risks . OUT: je suis consciente des risques .
+IN: i m aware of the risks . OUT: je suis conscient des risques .
+IN: i m glad you re coming . OUT: je suis heureux que vous veniez .
+IN: i m glad you re coming . OUT: je suis heureux que tu viennes .
+IN: i m glad you re coming . OUT: je suis heureuse que tu viennes .
+IN: i m glad you re coming . OUT: je suis heureuse que vous veniez .
+IN: i m happy for you both . OUT: je suis heureux pour vous deux .
+IN: i m happy for you both . OUT: je suis heureuse pour vous deux .
+IN: i m living in the city . OUT: je vis en ville .
+IN: i m mad at both of you . OUT: je suis furieux contre vous deux .
+IN: i m not all that drunk . OUT: je ne suis pas saoul a ce point .
+IN: i m not really worried . OUT: je ne suis pas vraiment inquiet .
+IN: i m not really worried . OUT: je ne suis pas vraiment inquiete .
+IN: i m on a paid vacation . OUT: je suis en conges payes .
+IN: i m proud of my school . OUT: je suis fier de mon ecole .
+IN: i m the one who s sick . OUT: c est moi qui suis malade .
+IN: i m the one who s sick . OUT: je suis celui qui est malade .
+IN: i m the youngest child . OUT: je suis le plus jeune enfant .
+IN: i m the youngest child . OUT: je suis la plus jeune enfant .
+IN: i m trying to stop tom . OUT: j essaye de stopper tom .
+IN: i m trying to stop tom . OUT: j essaye d arreter tom .
+IN: she is as poor as ever . OUT: elle est toujours aussi pauvre .
+IN: she is no match for me . OUT: elle n est pas de taille avec moi .
+IN: she is no match for me . OUT: elle ne fait pas le poids avec moi .
+IN: we re investigating it . OUT: nous enquetons a ce sujet .
+IN: we re leaving tomorrow . OUT: nous partirons demain .
+IN: we re tired of waiting . OUT: nous en avons assez d attendre .
+IN: you are probably wrong . OUT: tu as probablement tort .
+IN: you are probably wrong . OUT: vous avez probablement tort .
+IN: you are right in a way . OUT: en un sens tu as raison .
+IN: you are right in a way . OUT: en un sens vous avez raison .
+IN: you re being malicious . OUT: tu es medisant .
+IN: you re not fast enough . OUT: tu n es pas assez rapide .
+IN: you re not fast enough . OUT: vous n etes pas assez rapide .
+IN: you re not fast enough . OUT: vous n etes pas assez rapides .
+IN: you re really gorgeous . OUT: tu es vraiment magnifique .
+IN: you re really gorgeous . OUT: vous etes vraiment splendides .
+IN: you re really gorgeous . OUT: vous etes vraiment magnifique .
+IN: you re very perceptive . OUT: tu es tres perspicace .
+IN: you re very perceptive . OUT: vous etes tres perspicace .
+IN: you re very perceptive . OUT: vous etes tres perspicaces .
+IN: he is a highly paid man . OUT: c est un homme tres bien paye .
+IN: he is a tennis champion . OUT: c est un champion de tennis .
+IN: he is boiling with rage . OUT: il bout de colere .
+IN: he is no longer a child . OUT: ce n est plus un enfant .
+IN: he is not wearing a hat . OUT: il ne porte pas de chapeau .
+IN: he is on board the ship . OUT: il est a bord du bateau .
+IN: he s a lovely young man . OUT: c est un adorable jeune homme .
+IN: he s a lovely young man . OUT: c est un jeune homme adorable .
+IN: he s a lovely young man . OUT: c est un charmant jeune homme .
+IN: he s an italian teacher . OUT: il est professeur d italien .
+IN: he s wearing a new coat . OUT: il porte un nouveau manteau .
+IN: i am loved by my mother . OUT: je suis aime de ma mere .
+IN: i am loved by my mother . OUT: ma mere m aime .
+IN: i am your friend right ? OUT: je suis bien ton ami non ?
+IN: i m a little bit hungry . OUT: j ai un petit peu faim .
+IN: i m glad you enjoyed it . OUT: je suis heureux que tu aies apprecie .
+IN: i m here to protect you . OUT: je suis la pour te proteger .
+IN: i m here to protect you . OUT: je suis la pour vous proteger .
+IN: i m just trying to help . OUT: j essaie juste d aider .
+IN: i m looking for a house . OUT: je recherche une maison .
+IN: i m loved by my parents . OUT: mes parents m adorent .
+IN: i m not afraid to fight . OUT: je n ai pas peur de me battre .
+IN: i m not working for tom . OUT: je ne travaille pas pour tom .
+IN: i m tired of being sick . OUT: je suis fatigue d etre malade .
+IN: i m tired of being sick . OUT: je suis fatiguee d etre malade .
+IN: i m tired of pretending . OUT: j en ai assez de faire semblant .
+IN: i m too sleepy to drive . OUT: je suis trop somnolent pour conduire .
+IN: i m too sleepy to drive . OUT: j ai trop sommeil pour conduire .
+IN: she is eighteen at most . OUT: elle a dix huit ans au plus .
+IN: she is proud of her son . OUT: elle est fiere de son fils .
+IN: she is shy of strangers . OUT: elle est intimidee par les etrangers .
+IN: she seemed uninterested . OUT: elle semblait indifferente .
+IN: she seemed uninterested . OUT: elle sembla indifferente .
+IN: she seemed uninterested . OUT: elle a semble indifferente .
+IN: she speaks good english . OUT: elle parle un bon anglais .
+IN: she struggled to get up . OUT: elle eut du mal a se lever .
+IN: she struggled to get up . OUT: elle a eu du mal a se lever .
+IN: she struggled to get up . OUT: elle eprouva des difficultes a se lever .
+IN: she struggled to get up . OUT: elle a eprouve des difficultes a se lever .
+IN: she s lost her car keys . OUT: elle a perdu ses cles de voiture .
+IN: she s lost her car keys . OUT: elle a perdu les cles de sa voiture .
+IN: she s the teacher s pet . OUT: c est la chouchoute de la prof .
+IN: she s the teacher s pet . OUT: c est la chouchoute du prof .
+IN: they are going shopping . OUT: ils vont faire les courses .
+IN: they re looking for tom . OUT: ils cherchent tom .
+IN: they re looking for tom . OUT: elles cherchent tom .
+IN: they re speaking french . OUT: ils parlent en francais .
+IN: they re speaking french . OUT: elles parlent en francais .
+IN: we re going to miss tom . OUT: tom va nous manquer .
+IN: we re out of ammunition . OUT: nous sommes a court de munitions .
+IN: you re blocking my view . OUT: tu me bloques la vue .
+IN: you re blocking my view . OUT: vous me bloquez la vue .
+IN: you re trespassing here . OUT: vous etes dans une propriete privee ici .
+IN: you re trespassing here . OUT: tu es dans une propriete privee ici .
+IN: he is afraid of swimming . OUT: il a peur de nager .
+IN: he is busy with his work . OUT: il est occupe avec son travail .
+IN: he s a strange character . OUT: c est un drole de personnage .
+IN: he s here to protect you . OUT: il est la pour te proteger .
+IN: he s here to protect you . OUT: il est la pour vous proteger .
+IN: he s older but no wiser . OUT: il est plus vieux mais pas plus sage .
+IN: i am very poor at sports . OUT: je suis tres mediocre en sport .
+IN: i am willing to help you . OUT: je suis desireux de t aider .
+IN: i am willing to help you . OUT: je suis desireux de vous aider .
+IN: i m a little bit jealous . OUT: je suis un tantinet jaloux .
+IN: i m a little bit jealous . OUT: je suis un tantinet jalouse .
+IN: i m as tall as my father . OUT: je suis aussi grand que mon pere .
+IN: i m going to sleep on it . OUT: je vais y songer .
+IN: i m happy that it s over . OUT: je suis heureux que cela soit fini .
+IN: i m leaving you tomorrow . OUT: je te quitte demain .
+IN: i m not afraid of anyone . OUT: je ne crains personne .
+IN: i m not eating this fish . OUT: je ne vais pas manger ce poisson .
+IN: i m not from around here . OUT: je ne suis pas du coin .
+IN: i m not here on business . OUT: je ne suis pas ici pour affaires .
+IN: i m not leaving with you . OUT: je ne vais pas partir avec toi .
+IN: i m not making any plans . OUT: je ne fais pas le moindre projet .
+IN: i m surprised to see you . OUT: je suis etonne de vous voir .
+IN: i m surprised to see you . OUT: je suis surpris de te voir .
+IN: i m surprised to see you . OUT: je suis surprise de te voir .
+IN: i m surprised to see you . OUT: je suis etonne de te voir .
+IN: i m surprised to see you . OUT: je suis surpris de vous voir .
+IN: i m surprised to see you . OUT: je suis surprise de vous voir .
+IN: i m surprised to see you . OUT: je suis etonnee de vous voir .
+IN: i m surprised to see you . OUT: je suis etonnee de te voir .
+IN: she is brushing her hair . OUT: elle se brosse les cheveux .
+IN: she is deaf to my advice . OUT: elle est sourde a mes conseils .
+IN: she screamed with terror . OUT: elle cria de terreur .
+IN: she s a very wise mother . OUT: elle est une mere tres avisee .
+IN: they re going to the war . OUT: ils vont a la guerre .
+IN: they re going to the war . OUT: elles vont a la guerre .
+IN: they re right of course . OUT: ils ont raison bien sur .
+IN: they re right of course . OUT: elles ont raison bien sur .
+IN: we are worried about you . OUT: nous nous inquietons pour toi .
+IN: we are worried about you . OUT: nous sommes inquiets a votre sujet .
+IN: we re almost out of time . OUT: notre temps est presque ecoule .
+IN: you are completely wrong . OUT: tu as completement tort .
+IN: you are really very good . OUT: vous etes vraiment tres bons .
+IN: you are very insensitive . OUT: vous etes tres indelicats .
+IN: you are very insensitive . OUT: vous etes tres indelicates .
+IN: you are very insensitive . OUT: vous etes tres indelicat .
+IN: you are very insensitive . OUT: vous etes tres indelicate .
+IN: you are very insensitive . OUT: tu es tres indelicat .
+IN: you are very insensitive . OUT: tu es tres indelicate .
+IN: you re lying aren t you ? OUT: vous mentez n est ce pas ?
+IN: you re lying aren t you ? OUT: tu mens n est ce pas ?
+IN: you re missing the point . OUT: tu passes a cote .
+IN: you re missing the point . OUT: vous passez a cote .
+IN: you re missing the point . OUT: tu ne saisis pas .
+IN: you re missing the point . OUT: vous ne saisissez pas .
+IN: you re on the wrong ship . OUT: tu es sur le mauvais bateau .
+IN: you re on the wrong ship . OUT: vous etes sur le mauvais bateau .
+IN: you re spoiling the mood . OUT: tu fous en l air l atmosphere .
+IN: you re spoiling the mood . OUT: vous gachez l atmosphere .
+IN: you re spoiling the mood . OUT: tu gaches l atmosphere .
+IN: he is inclined to be lazy . OUT: il tend a etre paresseux .
+IN: he is very friendly to us . OUT: il est tres amical avec nous .
+IN: he s a university student . OUT: c est un etudiant de l universite .
+IN: he s agreed to do the job . OUT: il a accepte de faire le travail .
+IN: he s fresh out of college . OUT: il vient de sortir de l universite .
+IN: he s fresh out of college . OUT: il est frais emoulu de l ecole .
+IN: he s fresh out of college . OUT: il est frais emoulu de l universite .
+IN: he s good at what he does . OUT: il est bon dans ce qu il fait .
+IN: he s young and attractive . OUT: il est jeune et attirant .
+IN: i am acting for my father . OUT: j agis pour mon pere .
+IN: i am going to get dressed . OUT: je vais m habiller .
+IN: i am ready to go with you . OUT: je suis pret a aller avec vous .
+IN: i am very busy these days . OUT: je suis tres occupe ces jours ci .
+IN: i am watering the flowers . OUT: je suis en train d arroser les fleurs .
+IN: i m attaching three files . OUT: je joins trois fichiers .
+IN: i m being paid to do this . OUT: je suis paye pour faire ca .
+IN: i m being paid to do this . OUT: je suis payee pour faire ca .
+IN: i m being paid to do this . OUT: on me paie pour faire ca .
+IN: i m feeling sort of tired . OUT: je me sens plutot fatigue .
+IN: i m feeling sort of tired . OUT: je me sens plutot fatiguee .
+IN: i m getting tired of this . OUT: ca me pompe .
+IN: i m getting tired of this . OUT: ca me fatigue .
+IN: i m glad to see you again . OUT: je suis content de vous revoir .
+IN: i m glad to see you again . OUT: je me rejouis de te revoir .
+IN: i m glad to see you again . OUT: je me rejouis de vous revoir .
+IN: i m growing a beard again . OUT: je me fais a nouveau pousser la barbe .
+IN: i m looking for my camera . OUT: je cherche mon appareil photo .
+IN: i m not in good shape now . OUT: je ne suis pas en forme maintenant .
+IN: i m not usually this busy . OUT: je ne suis pas si occupe en general .
+IN: i m often only half awake . OUT: je ne suis souvent qu a moitie reveille .
+IN: i m often only half awake . OUT: je ne suis souvent qu a moitie reveillee .
+IN: i m still shopping around . OUT: je fais encore mon marche .
+IN: i m sure tom was involved . OUT: je suis sur que tom etait implique .
+IN: i m sure tom was involved . OUT: je suis sure que tom etait implique .
+IN: i m sure tom was involved . OUT: je suis sur que tom a ete implique .
+IN: i m sure tom was involved . OUT: je suis sure que tom a ete implique .
+IN: i m very happy to be here . OUT: je suis tres heureux d etre ici .
+IN: she is after a better job . OUT: elle cherche un meilleur emploi .
+IN: she is guilty of stealing . OUT: elle est coupable d un vol .
+IN: she is really a nice girl . OUT: c est vraiment une gentille fille .
+IN: she slept for a few hours . OUT: elle dormit quelques heures .
+IN: they re young and healthy . OUT: ils sont jeunes et en bonne sante .
+IN: they re young and healthy . OUT: elles sont jeunes et en bonne sante .
+IN: we re as hungry as wolves . OUT: nous avons une faim de loup .
+IN: we re not friends anymore . OUT: nous ne sommes plus amis .
+IN: we re not friends anymore . OUT: nous ne sommes plus amies .
+IN: we re not really brothers . OUT: nous ne sommes pas vraiment freres .
+IN: we re not to be disturbed . OUT: il ne faut pas nous deranger .
+IN: you are both in the wrong . OUT: vous avez tous deux faux .
+IN: you are late this morning . OUT: vous etes en retard ce matin .
+IN: you aren t a spy are you ? OUT: tu n es pas un espion si ?
+IN: you aren t a spy are you ? OUT: vous n etes pas une espionne si ?
+IN: you re not tired are you ? OUT: vous n etes pas fatigue si ?
+IN: you re not tired are you ? OUT: vous n etes pas fatiguee si ?
+IN: you re not tired are you ? OUT: vous n etes pas fatiguees si ?
+IN: you re not tired are you ? OUT: vous n etes pas fatigues si ?
+IN: you re not tired are you ? OUT: tu n es pas fatigue si ?
+IN: you re not tired are you ? OUT: tu n es pas fatiguee si ?
+IN: you re very sophisticated . OUT: tu es tres elegante .
+IN: you re very sophisticated . OUT: tu es fort elegante .
+IN: you re very sophisticated . OUT: tu es tres elegant .
+IN: you re very sophisticated . OUT: tu es fort elegant .
+IN: you re very sophisticated . OUT: vous etes tres elegante .
+IN: you re very sophisticated . OUT: vous etes tres elegant .
+IN: you re very sophisticated . OUT: vous etes tres elegantes .
+IN: you re very sophisticated . OUT: vous etes tres elegants .
+IN: you re very sophisticated . OUT: vous etes fort elegante .
+IN: you re very sophisticated . OUT: vous etes fort elegant .
+IN: you re very sophisticated . OUT: vous etes fort elegantes .
+IN: you re very sophisticated . OUT: vous etes fort elegants .
+IN: you re very sophisticated . OUT: vous etes fort raffine .
+IN: you re very sophisticated . OUT: vous etes fort raffinee .
+IN: you re very sophisticated . OUT: vous etes fort raffines .
+IN: you re very sophisticated . OUT: vous etes fort raffinees .
+IN: you re very sophisticated . OUT: vous etes tres raffine .
+IN: you re very sophisticated . OUT: vous etes tres raffinee .
+IN: you re very sophisticated . OUT: vous etes tres raffines .
+IN: you re very sophisticated . OUT: vous etes tres raffinees .
+IN: you re very sophisticated . OUT: tu es tres raffine .
+IN: you re very sophisticated . OUT: tu es tres raffinee .
+IN: you re very sophisticated . OUT: tu es fort raffine .
+IN: you re very sophisticated . OUT: tu es fort raffinee .
+IN: he is busy doing something . OUT: il est occupe a faire quelque chose .
+IN: he is eager to go to china . OUT: il est desireux d aller en chine .
+IN: he is impatient to see you . OUT: il est impatient de te voir .
+IN: he is one of my neighbours . OUT: c est l un de mes voisins .
+IN: he is swimming in the pool . OUT: il nage dans la piscine .
+IN: i am never free on sundays . OUT: je ne suis jamais libre le dimanche .
+IN: i am often in difficulties . OUT: je suis souvent en difficulte .
+IN: i m a black belt in karate . OUT: je suis ceinture noire de karate .
+IN: i m content with my salary . OUT: je suis satisfait de mon salaire .
+IN: i m going to go to my room . OUT: je vais aller dans ma chambre .
+IN: i m going to take a shower . OUT: je vais me doucher .
+IN: i m not that desperate yet . OUT: je ne suis pas encore si desespere .
+IN: i m not that desperate yet . OUT: je ne suis pas encore si desesperee .
+IN: i m sorry about last night . OUT: je suis desole a propos de hier soir .
+IN: i m sorry about last night . OUT: je suis desole a propos de cette nuit .
+IN: i m sorry about last night . OUT: je suis desolee a propos de hier soir .
+IN: i m sorry about last night . OUT: je suis desolee a propos de cette nuit .
+IN: i m thin but not too thin . OUT: je suis mince mais pas trop mince .
+IN: i m very sleepy today too . OUT: je suis tres endormi aujourd hui egalement .
+IN: she slowly closed her eyes . OUT: elle ferma lentement les yeux .
+IN: she stayed out in the rain . OUT: elle est restee dehors sous la pluie .
+IN: she suddenly became famous . OUT: elle est soudainement devenue celebre .
+IN: we re on the same page now . OUT: nous sommes maintenant en phase .
+IN: you re the love of my life . OUT: tu es l amour de ma vie .
+IN: you re winning aren t you ? OUT: tu gagnes n est ce pas ?
+IN: you re winning aren t you ? OUT: vous gagnez n est ce pas ?
+IN: he is a promising young man . OUT: c est un jeune homme prometteur .
+IN: he is almost always at home . OUT: il est presque toujours chez lui .
+IN: he is not likely to succeed . OUT: il semble probable qu il echoue .
+IN: he is suffering from a cold . OUT: il souffre d un rhume .
+IN: he s not as tall as you are . OUT: il n est pas aussi grand que toi .
+IN: i am dying for a cold drink . OUT: je creve d envie d une boisson fraiche .
+IN: i am interested in swimming . OUT: je m interesse a la natation .
+IN: i am interested in swimming . OUT: la natation m interesse .
+IN: i am looking for my brother . OUT: je cherche mon frere .
+IN: i m going to propose to her . OUT: je vais la demander en mariage .
+IN: i m in the mood to talk now . OUT: je suis maintenant dispose a discuter .
+IN: i m in the mood to talk now . OUT: je suis maintenant disposee a discuter .
+IN: i m not available right now . OUT: je ne suis pas libre tout de suite .
+IN: i m not going to allow that . OUT: je ne vais pas autoriser ca .
+IN: i m not suggesting anything . OUT: je ne suggere rien .
+IN: she is an excellent student . OUT: c est une excellente etudiante .
+IN: she is in low spirits today . OUT: elle n a pas le moral aujourd hui .
+IN: they are both good teachers . OUT: ce sont tous les deux de bons professeurs .
+IN: we are changing our clothes . OUT: nous changeons de vetements .
+IN: we re all to blame for that . OUT: nous en sommes tous responsables .
+IN: we re all to blame for that . OUT: nous en sommes toutes responsables .
+IN: we re all to blame for that . OUT: c est de notre faute a tous .
+IN: we re married to each other . OUT: nous sommes maries .
+IN: you re nothing but a coward . OUT: tu n es rien qu un lache .
+IN: you re nothing but a coward . OUT: vous n etes qu un lache .
+IN: you re really a hard worker . OUT: tu es vraiment dur au travail .
+IN: you re really a hard worker . OUT: vous etes vraiment apre au travail .
+IN: he s head over heels in love . OUT: il est fou amoureux .
+IN: i am more beautiful than you . OUT: je suis plus beau que toi .
+IN: i am more beautiful than you . OUT: je suis plus beau que vous .
+IN: i am more beautiful than you . OUT: je suis plus belle que vous .
+IN: i am more beautiful than you . OUT: je suis plus belle que toi .
+IN: i am not concerned with this . OUT: ceci m indiffere .
+IN: i am not concerned with this . OUT: ceci m est indifferent .
+IN: i am not concerned with this . OUT: je ne suis pas concerne par ceci .
+IN: i am proud of being a doctor . OUT: je suis fier d etre docteur .
+IN: i am taking french next year . OUT: je prends francais l annee prochaine .
+IN: i m glad to see you re happy . OUT: je me rejouis de te voir heureuse .
+IN: i m glad to see you re happy . OUT: je me rejouis de te voir heureux .
+IN: i m glad to see you re happy . OUT: je me rejouis de vous voir heureuse .
+IN: i m glad to see you re happy . OUT: je me rejouis de vous voir heureuses .
+IN: i m glad to see you re happy . OUT: je me rejouis de vous voir heureux .
+IN: i m going to let tom respond . OUT: je vais laisser tom repondre .
+IN: i m in a desperate situation . OUT: je me trouve dans une situation desesperee .
+IN: i m still intimidated by you . OUT: tu m intimides toujours .
+IN: i m still intimidated by you . OUT: vous m intimidez toujours .
+IN: i m working as fast as i can . OUT: je travaille aussi vite que je peux .
+IN: she is absorbed in her study . OUT: elle est absorbee par son travail d etude .
+IN: she is very bitter toward me . OUT: elle est tres amere envers moi .
+IN: they are talking about music . OUT: ils parlent de musique .
+IN: we are not going on vacation . OUT: nous n allons pas en vacances .
+IN: we re missing something here . OUT: nous ratons quelque chose ici .
+IN: we re missing something here . OUT: nous manquons quelque chose ici .
+IN: you are busy now aren t you ? OUT: tu es occupe en ce moment ?
+IN: you re not my friend anymore . OUT: tu n es plus mon ami .
+IN: you re not my friend anymore . OUT: vous n etes plus mon ami .
+IN: you re not my friend anymore . OUT: vous n etes plus mon amie .
+IN: you re not my friend anymore . OUT: tu n es plus mon amie .
+IN: you re not telling the truth . OUT: tu ne dis pas la verite .
+IN: you re not telling the truth . OUT: vous ne dites pas la verite .
+IN: you re not wearing any pants . OUT: tu ne portes aucun pantalon .
+IN: you re the girl of my dreams . OUT: tu es la fille de mes reves .
+IN: he is anxious for her to come . OUT: il est inquiet de sa venue .
+IN: he is taller than his brother . OUT: il est plus grand que son frere .
+IN: he is too dumb to fear danger . OUT: il est trop stupide pour craindre le danger .
+IN: i am the tallest in our class . OUT: je suis le plus grand de notre classe .
+IN: i m aware of that possibility . OUT: je suis conscient de cette possibilite .
+IN: i m aware of the difficulties . OUT: je me rends compte des difficultes .
+IN: i m drinking a beer right now . OUT: je bois une biere en ce moment meme .
+IN: i m free every day but monday . OUT: je suis libre tous les jours sauf lundi .
+IN: i m giving you an opportunity . OUT: je te donne une occasion .
+IN: i m going to hanover with you . OUT: je vais a hanovre avec toi .
+IN: i m not too worried about tom . OUT: je ne m inquiete pas trop pour tom .
+IN: i m pretty sure tom s serious . OUT: je suis convaincu que tom est serieux .
+IN: i m really unhappy about this . OUT: je suis vraiment malheureux a ce sujet .
+IN: i m taking a shower right now . OUT: je suis en train de prendre ma douche .
+IN: she is taller than her sister . OUT: elle est plus grande que sa s ur .
+IN: they are typical young people . OUT: c etaient des jeunes gens habituels .
+IN: they re walking without shoes . OUT: ils marchent pieds nus .
+IN: you are a beautiful butterfly . OUT: tu es un beau papillon .
+IN: you re home early aren t you ? OUT: tu es tot a la maison non ?
+IN: you re the only friend i have . OUT: tu es la seule amie que j aie .
+IN: you re the only friend i have . OUT: tu es le seul ami que j aie .
+IN: you re the same age as my son . OUT: tu as le meme age que mon fils .
+IN: you re the same age as my son . OUT: vous avez le meme age que mon fils .
+IN: he s never been in love before . OUT: il n a jamais ete amoureux auparavant .
+IN: he s never been in love before . OUT: jamais il n a ete amoureux auparavant .
+IN: he s obsessed with cleanliness . OUT: il est obsede par la proprete .
+IN: i am terribly afraid of snakes . OUT: j ai une peur terrible des serpents .
+IN: i am tired of listening to tom . OUT: je suis fatigue d ecouter tom .
+IN: i m a salesman for our company . OUT: je suis representant de commerce pour notre societe .
+IN: i m friends with a lot of them . OUT: je suis ami avec beaucoup d entre eux .
+IN: i m going to call an ambulance . OUT: je vais appeler une ambulance .
+IN: i m just trying to be friendly . OUT: j essaie simplement d etre amical .
+IN: i m not interested in politics . OUT: je ne m interesse pas a la politique .
+IN: i m running linux on my laptop . OUT: mon ordinateur portable tourne sous linux .
+IN: i m sorry if i embarrassed you . OUT: je suis desole si je vous ai embarrasse .
+IN: i m sorry if i embarrassed you . OUT: je suis desole si je vous ai embarrasses .
+IN: i m sorry if i embarrassed you . OUT: je suis desole si je vous ai embarrassees .
+IN: i m sorry if i embarrassed you . OUT: je suis desolee si je vous ai embarrasse .
+IN: i m sorry if i embarrassed you . OUT: je suis desolee si je vous ai embarrassee .
+IN: i m sorry if i embarrassed you . OUT: je suis desolee si je vous ai embarrassees .
+IN: i m sorry if i embarrassed you . OUT: je suis desolee si je vous ai embarrasses .
+IN: i m sorry if i embarrassed you . OUT: je suis desole si je t ai embarrassee .
+IN: i m sorry if i embarrassed you . OUT: je suis desole si je t ai embarrasse .
+IN: i m sorry i don t have change . OUT: je regrette je n ai pas de monnaie .
+IN: i m too lazy to do my homework . OUT: j ai la flemme de faire mes devoirs .
+IN: she s very interested in music . OUT: elle s interesse beaucoup a la musique .
+IN: we re going to wait in the car . OUT: nous allons attendre dans la voiture .
+IN: you re the only one for me now . OUT: tu es le seul pour moi maintenant .
+IN: you re the only one for me now . OUT: tu es la seule pour moi desormais .
+IN: you re the only one for me now . OUT: vous etes le seul desormais pour moi .
+IN: you re the only one for me now . OUT: vous etes la seule desormais pour moi .
+IN: he is a member in good standing . OUT: c est un membre estime .
+IN: i am accustomed to cold weather . OUT: je suis accoutume au temps froid .
+IN: i am accustomed to working hard . OUT: je suis habitue a travailler dur .
+IN: i am accustomed to working hard . OUT: je suis habituee a travailler dur .
+IN: i am thinking about my children . OUT: je pense a mes enfants .
+IN: i m familiar with the situation . OUT: je suis habitue a la situation .
+IN: i m familiar with the situation . OUT: je suis habituee a la situation .
+IN: i m going to go call the police . OUT: je vais appeler la police .
+IN: i m going to teach you a lesson . OUT: je vais te donner une lecon .
+IN: i m going to teach you a lesson . OUT: je vais vous donner une lecon .
+IN: i m going to the police station . OUT: je vais au commissariat .
+IN: i m kind of busy right now tom . OUT: je suis assez occupe tom .
+IN: i m leaving for canada tomorrow . OUT: je pars pour le canada demain .
+IN: i m leaving town for a few days . OUT: je quitte la ville pour quelques jours .
+IN: i m not afraid to be criticized . OUT: je n ai pas peur d etre critique .
+IN: i m ready to roll up my sleeves . OUT: je suis pret a retrousser mes manches .
+IN: i m too tired to go out jogging . OUT: je suis trop fatigue pour sortir courir .
+IN: i m very impressed by your work . OUT: je suis tres impressionne par votre travail .
+IN: she says that she likes flowers . OUT: elle dit qu elle aime les fleurs .
+IN: she spent all afternoon cooking . OUT: elle passa toute l apres midi a cuisiner .
+IN: she spent all afternoon cooking . OUT: elle passa tout l apres midi a cuisiner .
+IN: she s materialistic and shallow . OUT: elle est materialiste et superficielle .
+IN: we are pretty much in agreement . OUT: je suis assez d accord avec vous .
+IN: we re no longer working for tom . OUT: nous ne travaillons plus pour tom .
+IN: we re working as fast as we can . OUT: nous travaillons aussi vite que nous pouvons .
+IN: we re working as fast as we can . OUT: nous travaillons aussi vite que nous le pouvons .
+IN: you re not a city girl are you ? OUT: tu n es pas citadine si ?
+IN: you re not a city girl are you ? OUT: vous n etes pas citadine si ?
+IN: he is the chief of my department . OUT: il est le chef de mon departement .
+IN: he s english but lives in india . OUT: il est anglais mais habite en inde .
+IN: i am not a doctor but a teacher . OUT: je ne suis pas medecin mais professeur .
+IN: i am not a doctor but a teacher . OUT: je ne suis pas medecin mais enseignant .
+IN: i am not a doctor but a teacher . OUT: je ne suis pas medecin mais instituteur .
+IN: i m fed up with this wet weather . OUT: j en ai marre de ce temps humide .
+IN: i m sure i have the right number . OUT: je suis convaincu d avoir le bon numero .
+IN: she is convinced of my innocence . OUT: elle est convaincue de mon innocence .
+IN: she is two years younger than me . OUT: elle est deux ans plus jeune que moi .
+IN: she is two years younger than me . OUT: elle a deux ans de moins que moi .
+IN: she showed up early for practice . OUT: elle est venue tot pour pratiquer .
+IN: she showed up early for practice . OUT: elle est arrivee tot pour l entrainement .
+IN: she spent the weekend by herself . OUT: elle a passe le week end seule .
+IN: they aren t telling us the truth . OUT: ils ne nous disent pas la verite .
+IN: we re getting married in october . OUT: nous nous marions en octobre .
+IN: you aren t allowed to park there . OUT: tu n es pas autorise a stationner la .
+IN: you aren t allowed to park there . OUT: vous n etes pas autorises a stationner la .
+IN: you re not going to believe this . OUT: tu ne vas pas le croire .
+IN: you re not going to believe this . OUT: vous n allez pas le croire .
+IN: he is to come to my house tonight . OUT: il va venir chez moi ce soir .
+IN: he is unsatisfied with the result . OUT: il n est pas content du resultat .
+IN: he is unsatisfied with the result . OUT: il est insatisfait du resultat .
+IN: i am fed up with this wet weather . OUT: j en ai assez de ce temps humide .
+IN: i am fed up with this wet weather . OUT: j en ai marre de ce temps humide .
+IN: i m confident that you ll succeed . OUT: je suis sur que vous allez reussir .
+IN: i m confident that you ll succeed . OUT: je suis sur que tu vas reussir .
+IN: i m confident that you ll succeed . OUT: je suis certain que tu reussiras .
+IN: i m going to need some more money . OUT: je vais avoir besoin de plus d argent .
+IN: i m often compared to my brothers . OUT: je suis souvent compare a mes freres .
+IN: i m taking care of my grandfather . OUT: je m occupe de mon grand pere .
+IN: i m taking care of my grandfather . OUT: je prends soin de mon grand pere .
+IN: she is on friendly terms with him . OUT: elle est en bons termes avec lui .
+IN: she should have been more careful . OUT: elle aurait du etre plus prudente .
+IN: she should know better at her age . OUT: elle devrait etre plus avisee a son age .
+IN: she s putting the children to bed . OUT: elle est en train de coucher les enfants .
+IN: they re two very different things . OUT: ce sont deux choses absolument differentes .
+IN: we re afraid we ll miss our train . OUT: nous craignons de manquer notre train .
+IN: we re going to stay until the end . OUT: nous allons rester jusqu a la fin .
+IN: you re free of all responsibility . OUT: vous etes libere de toute responsabilite .
+IN: you re free of all responsibility . OUT: vous etes liberee de toute responsabilite .
+IN: you re free of all responsibility . OUT: vous etes liberees de toute responsabilite .
+IN: you re free of all responsibility . OUT: vous etes liberes de toute responsabilite .
+IN: you re free of all responsibility . OUT: tu es libere de toute responsabilite .
+IN: you re free of all responsibility . OUT: tu es liberee de toute responsabilite .
+IN: you re very religious aren t you ? OUT: vous etes tres religieux n est ce pas ?
+IN: you re very religious aren t you ? OUT: vous etes tres religieuses n est ce pas ?
+IN: you re very religious aren t you ? OUT: vous etes tres religieuse n est ce pas ?
+IN: you re very religious aren t you ? OUT: tu es tres religieux n est ce pas ?
+IN: you re very religious aren t you ? OUT: tu es tres religieuse n est ce pas ?
+IN: he is content with the simple life . OUT: il est content de sa vie simple .
+IN: i am yawning because i feel sleepy . OUT: je baille parce que j ai sommeil .
+IN: i m interested in oriental pottery . OUT: je suis interesse par la ceramique orientale .
+IN: i m interested in oriental pottery . OUT: je suis interessee par la ceramique orientale .
+IN: i m pleased with their performance . OUT: je suis satisfait de leur representation .
+IN: i m pleased with their performance . OUT: je suis satisfaite de leur representation .
+IN: i m pleased with their performance . OUT: je suis satisfait de leur prestation .
+IN: i m pleased with their performance . OUT: je suis satisfaite de leur prestation .
+IN: i m pleased with their performance . OUT: je suis satisfait de leur performance .
+IN: i m pleased with their performance . OUT: je suis satisfaite de leur performance .
+IN: she is able to speak ten languages . OUT: elle sait parler dix langues .
+IN: they are aware of the difficulties . OUT: ils sont conscients des difficultes .
+IN: we re looking for a place to sleep . OUT: nous cherchons un endroit ou dormir .
+IN: we re totally different people now . OUT: nous sommes desormais des gens completement differents .
+IN: you are more stupid than i thought . OUT: tu es plus idiot que je pensais .
+IN: you are not supposed to smoke here . OUT: vous n etes pas censes fumer ici .
+IN: you are not supposed to smoke here . OUT: vous n etes pas cense fumer ici .
+IN: you are not supposed to smoke here . OUT: tu n es pas censee fumer ici .
+IN: you are not supposed to smoke here . OUT: tu n es pas cense fumer ici .
+IN: you are not supposed to smoke here . OUT: vous n etes pas censees fumer ici .
+IN: you are not supposed to smoke here . OUT: vous n etes pas censee fumer ici .
+IN: you are now on the way to recovery . OUT: vous etes maintenant en voie de retablissement .
+IN: he s here trying to stir up trouble . OUT: il est ici pour chercher la bagarre .
+IN: he s here trying to stir up trouble . OUT: il est ici pour fomenter des troubles .
+IN: he s nervous and gets scared easily . OUT: il est nerveux et facilement effraye .
+IN: she is used to staying up all night . OUT: elle est accoutumee a veiller toute la nuit .
+IN: she surprised him with a small gift . OUT: elle le surprit par un petit cadeau .
+IN: he is absorbed in the study of latin . OUT: il est plonge dans les cours de latin .
+IN: he is good for five thousand dollars . OUT: il marche pour dollars .
+IN: he is making preparations for a trip . OUT: il fait les preparatifs pour un voyage .
+IN: i m having a hard time concentrating . OUT: j ai du mal a me concentrer .
+IN: i m sorry we re completely sold out . OUT: je suis desole nous avons tout vendu .
+IN: i m sorry we re completely sold out . OUT: je suis desolee nous avons tout vendu .
+IN: i m sorry we re completely sold out . OUT: je suis desole nous avons ete devalises .
+IN: i m very concerned about her illness . OUT: je m inquiete beaucoup de sa maladie .
+IN: we re prepared to make tough choices . OUT: nous sommes prets a prendre des decisions difficiles .
+IN: you are really very productive today . OUT: tu es vraiment tres productif aujourd hui .
+IN: you are really very productive today . OUT: vous etes vraiment tres productive aujourd hui .
+IN: he is holding his books under his arm . OUT: il porte ses livres sous son bras .
+IN: i am free till o clock this evening . OUT: je suis libre jusqu a heures ce soir .
+IN: i am going to write a letter tomorrow . OUT: je vais ecrire une lettre demain .
+IN: i m ashamed because i acted foolishly . OUT: j ai honte car j ai agi stupidement .
+IN: i m now officially part of this group . OUT: je fait maintenant officiellement partie de ce groupe .
+IN: she seemed disappointed at the result . OUT: elle a semble decue par le resultat .
+IN: he s been divorced for years already . OUT: il est divorce depuis deux ans deja .
+IN: i m going back to australia in october . OUT: je retourne en australie en octobre .
+IN: i m looking forward to seeing you soon . OUT: j ai hate de te voir bientot .
+IN: i m looking forward to seeing you soon . OUT: je suis impatient de te voir bientot .
+IN: i m looking forward to seeing you soon . OUT: je suis impatiente de te voir bientot .
+IN: i m really concerned about your future . OUT: je suis vraiment concerne par votre avenir .
+IN: we re still getting to know each other . OUT: on apprend encore a se connaitre .
+IN: she is interested in learning new ideas . OUT: elle est interessee a apprendre de nouvelles idees .
+IN: we are familiar with that author s name . OUT: le nom de l auteur nous est familier .
+IN: you are holding my hand in that picture . OUT: tu me tiens la main sur la photo .
+IN: he is always trying to do the impossible . OUT: il essaye toujours de faire l impossible .
+IN: i m very happy to make your acquaintance . OUT: je suis heureux de vous avoir rencontre .
+IN: we re expecting a good harvest this year . OUT: la moisson s annonce bonne cette annee .
+IN: she is more an acquaintance than a friend . OUT: elle est plus une relation qu une amie .
+IN: they are matters which we need to discuss . OUT: ce sont des affaires dont nous devons parler .
+IN: i m breaking up with my girlfriend tonight . OUT: je romps ce soir avec ma petite amie .
+IN: i m breaking up with my girlfriend tonight . OUT: je romps ce soir avec ma petite copine .
+IN: i m breaking up with my girlfriend tonight . OUT: je romps ce soir avec ma nana .
+IN: she is looking forward to seeing him again . OUT: elle avait hate de le revoir .
+IN: she is looking forward to seeing him again . OUT: elle a hate de le revoir .
+IN: she is looking forward to seeing him again . OUT: elle est impatiente de le revoir .
+IN: we re having some guests over this evening . OUT: nous avons des invites ce soir .
+IN: i m looking forward to receiving your reply . OUT: j ai hate de recevoir ta reponse .
+IN: i m looking forward to receiving your reply . OUT: il me tarde de recevoir votre reponse .
+IN: we re going to discuss the problem tomorrow . OUT: nous discuterons du probleme demain .
+IN: he is amusing himself by playing video games . OUT: il s amuse en jouant aux jeux videos .
