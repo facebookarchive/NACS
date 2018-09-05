@@ -1,6 +1,7 @@
 numpy
-torch>=0.3.0
+torch>=0.4.1
 torchtext
 visdom
 imageio
 matplotlib
+sacrebleu
