@@ -103,9 +103,6 @@ def evaluate(model=None, batch_iter=None, src_vocab=None, trg_vocab=None, src_vo
         n_words += sum(trg_lengths)
         n_seqs += len(trg_lengths)
 
-        predict_src_tags = True if src_tags_var is not None and model.src_tagger is not None else False
-        predict_trg_tags = True if trg_tags_var is not None and model.trg_tagger is not None else False
-
         # it does not matter for exact match
         result = model(src_var=src_var, src_lengths=src_lengths, trg_var=trg_var, trg_lengths=trg_lengths,
                        max_length=time_steps, tf_ratio=1.,
@@ -114,8 +111,7 @@ def evaluate(model=None, batch_iter=None, src_vocab=None, trg_vocab=None, src_vo
                        return_attention=False, return_states=False)
 
         predictions = result['preds']
-        src_tag_predictions = result['src_tag_preds'] if predict_src_tags else None
-        trg_tag_predictions = result['trg_tag_preds'] if predict_trg_tags else None
+
         loss_dict = result['loss']
         result = None
 
@@ -139,33 +135,11 @@ def evaluate(model=None, batch_iter=None, src_vocab=None, trg_vocab=None, src_vo
         cor_per_seq = np.equal(correct.sum(1).cpu().numpy(), trg_lengths)
         n_seqs_correct += cor_per_seq.sum()
 
-        # src tag accuracy
-        if predict_src_tags:
-            batch_src_tag_correct, batch_src_tag_total = get_accuracy(src_tags_var, src_tag_predictions,
-                                                                      pad_idx=pad_idx_tags_src)
-            n_src_tags_correct += batch_src_tag_correct.data.cpu().numpy()[0]
-            n_src_tags += batch_src_tag_total.data.cpu().numpy()[0]
-
-        # trg tag accuracy
-        if predict_trg_tags:
-            batch_trg_tag_correct, batch_trg_tag_total = get_accuracy(trg_tags_var, trg_tag_predictions,
-                                                                      pad_idx=pad_idx_tags_trg)
-            n_trg_tags_correct += batch_trg_tag_correct.data.cpu().numpy()[0]
-            n_trg_tags += batch_trg_tag_total.data.cpu().numpy()[0]
-
     n_correct = n_correct
     n_seqs_correct = n_seqs_correct
     ppx = math.exp(total_loss / n_words)
     acc = 100. * (n_correct / n_words)
     em = 100. * (n_seqs_correct / n_seqs)
-
-    if predict_src_tags:
-        logger.info("src tag accuracy: %f (%d/%d)" % (
-            100.*n_src_tags_correct/n_src_tags, n_src_tags_correct, n_src_tags))
-
-    if predict_trg_tags:
-        logger.info("trg tag accuracy: %f (%d/%d)" % (
-            100.*n_trg_tags_correct/n_trg_tags, n_trg_tags_correct, n_trg_tags))
 
     if use_cuda:
         torch.cuda.empty_cache()
@@ -384,61 +358,3 @@ def evaluate_bleu_external(ref_path=None, pred_path=None, multi_bleu_script="seq
     bleu_score = float(m.group(1))
     return bleu_score
 
-
-def get_symbol_type_cooc_matrix(model=None, batch_iter=None, trg_vocab=None, max_length=0, n_symbols=0):
-    """ Get symbol-type co-occurrence matrix. """
-    assert max_length > 0, "please specify a maximum length, this is prediction!"
-    assert n_symbols > 0, "please specify n_symbols"
-
-    unk_index = trg_vocab.stoi[UNK_TOKEN]
-    pad_index = trg_vocab.stoi[PAD_TOKEN]
-    eos_index = trg_vocab.stoi[EOS_TOKEN]
-    n_words = len(trg_vocab)
-
-    model.eval()
-
-    cooc = np.zeros([n_symbols, n_words])
-    sym_counts = np.zeros(n_symbols)
-
-    for batch in iter(batch_iter):
-
-        src_var, src_lengths = batch.src
-        trg_var, trg_lengths = batch.trg
-        src_tags_var = batch.src_tags if hasattr(batch, 'src_tags') else None
-        trg_tags_var = batch.trg_tags if hasattr(batch, 'trg_tags') else None
-        max_time = trg_var.size(1)
-
-        src_lengths = src_lengths.view(-1).tolist()
-        # trg_lengths = trg_lengths.view(-1).tolist()
-
-        result = model(src_var=src_var, src_lengths=src_lengths, max_length=max_time,
-                       src_tags_var=src_tags_var, trg_tags_var=trg_tags_var,
-                       return_log_probs=True)
-
-        # predictions = result['preds']
-        log_probs = result['log_probs']
-        pred_mask = result['mask']
-        probs = torch.exp(log_probs)
-
-        # mask padding
-        pad_mask = (trg_var == pad_index)
-        pad_mask = pad_mask + (torch.eq(pred_mask, False))
-        pad_mask.unsqueeze_(2)
-        probs = probs.masked_fill(pad_mask, 0.)
-        probs = probs.data.cpu().numpy()
-
-        symbols = result['symbols'].data.cpu().numpy()
-
-        # symbol_log_probs = result['symbol_log_probs']
-        # make sure every sequence has an <eos> at the end, so that we can use nonzero() safely
-        # eos_column = LongTensor(batch_size, 1).fill_(eos_index)
-        # predictions = torch.cat((predictions.data, eos_column), dim=1)
-
-        for prob1, sym1 in zip(probs, symbols):
-            for probs, sym in zip(prob1, sym1):
-                cooc[sym, :] += probs
-                sym_counts[sym] += 1
-
-    cooc = cooc / np.maximum(1., sym_counts[:, None])
-
-    return cooc

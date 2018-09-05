@@ -10,7 +10,9 @@ bleu = Extension(
         'seq2seq/clib/libbleu/libbleu.cpp',
         'seq2seq/clib/libbleu/module.cpp',
     ],
-    extra_compile_args=['-std=c++11'],
+    # On Mac OS X, add the following to the extra_compile_args list:
+    # '-mmacosx-version-min=10.11'
+    extra_compile_args=['-std=c++11', '-mmacosx-version-min=10.11'],
 )
 
 
@@ -39,13 +41,4 @@ setup(
     install_requires=reqs.strip().split('\n'),
     packages=find_packages(),
     ext_modules=[bleu],
-
-    # build and install PyTorch extensions
-    # package_data={
-    #     'fairseq': ['temporal_convolution_tbc/*.so'],
-    # },
-    # include_package_data=True,
-    # cmdclass={
-    #     'build_py': build_py_hook,
-    # },
 )

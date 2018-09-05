@@ -15,7 +15,6 @@ import pdb
 import numpy as np
 from torch import nn
 from torchtext import data, datasets
-import aisweeper3
 
 from seq2seq.utils import EOS_TOKEN, PAD_TOKEN, get_fields, build_model
 from seq2seq.nn.translationdataset import FactoredTranslationDataset

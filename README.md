@@ -8,8 +8,7 @@ First install all requirements, e.g. `pip install -r requirements.txt`
 
 Before use, make sure to compile the extensions:
 
-- `python setup.py build`
-- `python setup.py develop`
+- `python setup.py build develop`
 
 
 ## Usage
