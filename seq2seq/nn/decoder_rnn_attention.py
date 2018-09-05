@@ -72,7 +72,7 @@ class DecoderRNNAttention(nn.Module):
             assert dec_input_emb, "must also feed emb if predicting from emb (this is to limit combinations)"
             assert predict_from_dec, "must also predict from decoder (this is to limit combinations)"
 
-        self.criterion = nn.NLLLoss(reduce=False, size_average=False, ignore_index=self.pad_idx)
+        self.criterion = nn.NLLLoss(reduction='none', ignore_index=self.pad_idx)
 
         self.embedding = nn.Embedding(n_words, emb_dim, padding_idx=vocab.stoi[PAD_TOKEN])
 

@@ -71,7 +71,7 @@ class DecoderRNN(nn.Module):
         self.unk_idx = vocab.stoi[UNK_TOKEN]
         self.eos_idx = vocab.stoi[EOS_TOKEN]
 
-        self.criterion = nn.NLLLoss(reduce=False, size_average=False, ignore_index=self.pad_idx)
+        self.criterion = nn.NLLLoss(reduction='none', ignore_index=self.pad_idx)
 
     def init_hidden(self, encoder_final):
         """

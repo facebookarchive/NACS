@@ -24,11 +24,10 @@ class BaseModel(nn.Module):
 
     def __init__(self, n_words_src=0, n_words_trg=0, dim=0, emb_dim=0,
                  n_enc_layers=1, n_dec_layers=1,
-                 dropout=0., bidirectional=True,
-                 emb_dim_tags=0, n_tags_src=0, n_tags_trg=0,
-                 predict_src_tags=False, predict_trg_tags=False,
-                 pass_hidden_state=True, vocab_src=None, vocab_trg=None,
-                 vocab_tags_src=None, vocab_tags_trg=None,
+                 dropout=0.,
+                 emb_dim_tags=0,
+                 pass_hidden_state=True,
+                 vocab_src=None, vocab_trg=None,
                  rnn_type='gru'):
 
         super(BaseModel, self).__init__()
@@ -43,13 +42,9 @@ class BaseModel(nn.Module):
         self.n_words_trg = n_words_trg
 
         self.dropout = dropout
-        self.predict_src_tags = predict_src_tags
-        self.predict_trg_tags = predict_trg_tags
 
         self.vocab_src = vocab_src
         self.vocab_trg = vocab_trg
-        self.vocab_tags_src = vocab_tags_src
-        self.vocab_tags_trg = vocab_tags_trg
 
         self.rnn_type = rnn_type
         self.pass_hidden_state = pass_hidden_state
