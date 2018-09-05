@@ -72,7 +72,7 @@ class DecoderRNNAttention(nn.Module):
             assert dec_input_emb, "must also feed emb if predicting from emb (this is to limit combinations)"
             assert predict_from_dec, "must also predict from decoder (this is to limit combinations)"
 
-        self.criterion = nn.NLLLoss(reduce=False, size_average=False, ignore_index=self.pad_idx)
+        self.criterion = nn.NLLLoss(reduction='none', ignore_index=self.pad_idx)
 
         self.embedding = nn.Embedding(n_words, emb_dim, padding_idx=vocab.stoi[PAD_TOKEN])
 
@@ -123,10 +123,6 @@ class DecoderRNNAttention(nn.Module):
         self.ctx_proj = nn.Linear(enc_dim, ctx_dim, bias=False) if ctx_dim > 0 else None
         self.pre_output_layer = nn.Linear(pre_output_input_dim, dim, bias=False)
 
-        # gate_dim_inp = proj_ctx_dim + emb_dim + dim
-        # self.ctx_gate_src_layer = nn.Linear(gate_dim_inp, dim, bias=False) if ctx_gate else None
-        # self.ctx_gate_trg_layer = nn.Linear(gate_dim_inp, dim, bias=False) if ctx_gate else None
-
         self.output_layer = nn.Linear(dim, n_words, bias=False)
 
         self.emb_dropout = nn.Dropout(self.dropout)
@@ -158,11 +154,11 @@ class DecoderRNNAttention(nn.Module):
             encoder_final_h, encoder_final_c = encoder_final
 
             for h, layer in zip(encoder_final_h, self.enc_to_dec_h):
-                h_init = F.tanh(layer(h))
+                h_init = torch.tanh(layer(h))
                 hiddens.append(h_init)
 
             for c, layer in zip(encoder_final_c, self.enc_to_dec_c):
-                c_init = F.tanh(layer(c))
+                c_init = torch.tanh(layer(c))
                 cells.append(c_init)
 
             hiddens = torch.stack(hiddens, dim=0)
@@ -170,14 +166,14 @@ class DecoderRNNAttention(nn.Module):
             hidden = (hiddens, cells)
 
             # copy initial state if we have more layers than the encoder
-            # TODO can handle this in a more principled way
             if self.n_layers > encoder_final_h.size(0):
-                hidden = (torch.cat([hiddens, hiddens], dim=0), torch.cat([cells, cells], dim=0))
+                hidden = (torch.cat([hiddens, hiddens], dim=0),
+                          torch.cat([cells, cells], dim=0))
 
         else:  # gru or rnn
             hiddens = []
             for h, layer in zip (encoder_final, self.enc_to_dec_h):
-                h_init = F.tanh(layer(h))
+                h_init = torch.tanh(layer(h))
                 hiddens.append(h_init)
 
             hidden = torch.stack(hiddens, dim=0)
@@ -271,22 +267,6 @@ class DecoderRNNAttention(nn.Module):
             rnn_input_emb = embedded
             rnn_input_ctx = context
 
-            # gate context vector ("source")
-            # if self.ctx_gate_src_layer is not None:
-            #     ctx_gate_src = self.ctx_gate_src_layer(torch.cat((embedded, prev_state, context), 2))
-            #     ctx_gate_src = F.sigmoid(ctx_gate_src)
-            #     ctx_gate_trg = 1-ctx_gate_src
-            #     all_src_gates.append(ctx_gate_src)
-            #     rnn_input_ctx = ctx_gate_src * context
-            #     rnn_input_emb = ctx_gate_trg * embedded
-
-            # gate the previous word ("target")
-            # if self.ctx_gate_trg_layer is not None:
-                # ctx_gate_trg = self.ctx_gate_trg_layer(torch.cat((embedded, prev_state, context), 2))
-                # ctx_gate_trg = F.sigmoid(ctx_gate_trg)
-                # all_trg_gates.append(ctx_gate_trg)
-                # rnn_input_emb = ctx_gate_trg * embedded
-
             if self.dec_input_emb:
                 rnn_input = torch.cat((rnn_input_emb, rnn_input_ctx), 2)
             else:
@@ -340,40 +320,14 @@ class DecoderRNNAttention(nn.Module):
         if return_attention:
             all_attention_scores = all_attention_scores.transpose(0, 1)  # (T, B, T') -> (B, T, T')
 
-        # keep gate statistics
-        mean_src_gate, mean_trg_gate = None, None
-        if len(all_src_gates) > 0:
-            src_gates = torch.cat(all_src_gates, 1)  # [B, T, D]
-            src_gate_dim = src_gates.size(2)
-
-            if trg_var is not None:
-                padding_mask = (trg_var == self.pad_idx)
-                mean_src_gate = src_gates.masked_fill(padding_mask.unsqueeze(2), 0.)
-                # mean_trg_gate = trg_gates.masked_fill(padding_mask.unsqueeze(2), 0.)
-                num_tokens = (1-padding_mask).float().sum()
-            else:
-                # use predicted lengths
-                mean_src_gate = src_gates.masked_fill(1-mask.transpose(0, 1).unsqueeze(2), 0.)
-                # mean_trg_gate = trg_gates.masked_fill(1-mask.transpose(0, 1).unsqueeze(2), 0.)
-                num_tokens = mask.float().sum()
-
-            mean_src_gate = mean_src_gate.sum() / (num_tokens * src_gate_dim)
-            # mean_trg_gate = mean_trg_gate.sum() / (num_tokens * trg_gate_dim)
-
-        # if len(all_trg_gates) > 0:
-        #     trg_gates = torch.cat(all_trg_gates, 1)  # [B, T, D]
-        #     trg_gate_dim = trg_gates.size(2)
-
         loss = None
         if trg_var is not None:
-            loss = self.get_loss(log_probs=all_log_probs, trg_var=trg_var, mask=mask)
+            loss = self.get_loss(log_probs=all_log_probs,
+                                 trg_var=trg_var, mask=mask)
             loss = dict(loss=loss)
-            if mean_src_gate is not None:
-                loss['mean_src_gate'] = mean_src_gate
-            if mean_trg_gate is not None:
-                loss['mean_trg_gate'] = mean_trg_gate
 
-        result = dict(preds=all_predictions, loss=loss, att_scores=all_attention_scores,
+        result = dict(preds=all_predictions, loss=loss,
+                      att_scores=all_attention_scores,
                       states=decoder_states, mask=mask)
         return result
 

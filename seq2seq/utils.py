@@ -41,8 +41,7 @@ def init_gru(cell, gain=1):
             torch.nn.init.orthogonal(hh[i:i + cell.hidden_size], gain=gain)
 
 
-def get_fields(src=None, trg=None, src_tags=None, trg_tags=None,
-               unk_src=True, unk_trg=True,
+def get_fields(src=None, trg=None, unk_src=True, unk_trg=True,
                sos_src=False, sos_trg=False):
     """
     Create torchtext fields for data IO.
@@ -53,29 +52,12 @@ def get_fields(src=None, trg=None, src_tags=None, trg_tags=None,
                            eos_token=EOS_TOKEN, pad_token=PAD_TOKEN, unk_token=UNK_TOKEN if unk_src else None,
                            init_token=SOS_TOKEN if sos_src else None)
 
-    use_src_tags = True if src_tags else False
-    use_trg_tags = True if trg_tags else False
-
     trg_field = data.Field(sequential=True, tokenize=str.split, batch_first=True, include_lengths=True,
                            eos_token=EOS_TOKEN, pad_token=PAD_TOKEN, unk_token=UNK_TOKEN if unk_trg else None,
                            init_token=SOS_TOKEN if sos_trg else None)
 
     exts = ['.' + src, '.' + trg]
     fields = [('src', src_field), ('trg', trg_field)]
-
-    # add an extra field for factored input
-    # only one field supported for now (tags, 1 tag per input token)
-    if use_src_tags:
-        src_tags_field = data.Field(sequential=True, tokenize=str.split, batch_first=True, include_lengths=False,
-                                    eos_token=EOS_TOKEN, pad_token=PAD_TOKEN, unk_token=None)
-        exts += ['.' + src_tags]
-        fields += [('src_tags', src_tags_field)]
-
-    if use_trg_tags:
-        trg_tags_field = data.Field(sequential=True, tokenize=str.split, batch_first=True, include_lengths=False,
-                                    eos_token=EOS_TOKEN, pad_token=PAD_TOKEN, unk_token=None)
-        exts += ['.' + trg_tags]
-        fields += [('trg_tags', trg_tags_field)]
 
     return fields, exts
 
@@ -150,36 +132,21 @@ class Example(object):
         self.__dict__.update(d)
 
 
-def postprocess_examples(batch=None, fields=None, predictions=None, attention_scores=None,
-                         src_tag_predictions=None, trg_tag_predictions=None,
-                         trg_symbols=None):
+def postprocess_examples(batch=None, fields=None, predictions=None,
+                         attention_scores=None):
 
     examples = []
 
     src_var, src_lengths = batch.src
     trg_var, trg_lengths = batch.trg
 
-    use_src_tags = True if hasattr(batch, 'src_tags') else False
-    use_trg_tags = True if hasattr(batch, 'trg_tags') else False
-
-    if use_src_tags:
-        src_tags_var = batch.src_tags
-
-    if use_trg_tags:
-        trg_tags_var = batch.trg_tags
-
     src_vocab = fields[0][-1].vocab
     trg_vocab = fields[1][-1].vocab
-    src_tags_vocab = fields[2][-1].vocab if use_src_tags else None
-    trg_tags_vocab = fields[-1][-1].vocab if fields[-1][0] == 'trg_tags' else None
 
     for rid in range(len(batch.src[1])):
 
         src_seq = [src_vocab.itos[i] for i in src_var[rid].data.cpu().numpy()][:src_lengths[rid]]
-        src_seq_tags = [src_tags_vocab.itos[i] for i in src_tags_var[rid].data.cpu().numpy()][:src_lengths[rid]] if use_src_tags else None
-
         trg_seq = [trg_vocab.itos[i] for i in trg_var[rid].data.cpu().numpy()][:trg_lengths[rid]] if trg_var is not None else None
-        trg_seq_tags = [trg_tags_vocab.itos[i] for i in trg_tags_var[rid].data.cpu().numpy()][:trg_lengths[rid]] if use_trg_tags else None
 
         # words
         if predictions is not None:
@@ -191,42 +158,17 @@ def postprocess_examples(batch=None, fields=None, predictions=None, attention_sc
         else:
             prediction = None
 
-        # process src tag predictions
-        if src_tag_predictions is not None:
-            src_tag_pred = [src_tags_vocab.itos[tag_id] for tag_id in src_tag_predictions[rid].data.cpu().numpy()[:src_lengths[rid]]]
-        else:
-            src_tag_pred = None
-
-        # process trg tag predictions
-        if trg_tag_predictions is not None:
-            trg_tag_pred = [trg_tags_vocab.itos[tag_id] for tag_id in trg_tag_predictions[rid].data.cpu().numpy()[:trg_lengths[rid]]]
-        else:
-            trg_tag_pred = None
-
         attention = attention_scores[rid, :len(prediction), :len(src_seq)].cpu().numpy() if attention_scores is not None else None
 
-        # trg symbols
-        if trg_symbols is not None and prediction is not None:
-            trg_sym = trg_symbols[rid].data.cpu().numpy()[:len(prediction)]
-        else:
-            trg_sym = None
-
-        example = Example(dict(src=src_seq, trg=trg_seq, src_tags=src_seq_tags,
-                               trg_tags=trg_seq_tags,
+        example = Example(dict(src=src_seq, trg=trg_seq,
                                prediction=prediction,
-                               attention_scores=attention,
-                               src_tag_pred=src_tag_pred,
-                               trg_tag_pred=trg_tag_pred,
-                               trg_symbols=trg_sym))
+                               attention_scores=attention))
         examples.append(example)
 
     return examples
 
 
 def get_random_examples(batch, fields, predictions=None,
-                        src_tag_predictions=None,
-                        trg_tag_predictions=None,
-                        trg_symbols=None,
                         attention_scores=None, n=3, seed=None,):
     """
     Return n random examples from batch (without duplicates).
@@ -235,8 +177,6 @@ def get_random_examples(batch, fields, predictions=None,
         batch:
         fields:
         predictions:
-        src_tag_predictions:
-        trg_tag_predictions:
         attention_scores:
         n:
         seed:
@@ -245,10 +185,7 @@ def get_random_examples(batch, fields, predictions=None,
 
     """
     examples = postprocess_examples(batch, fields, predictions=predictions,
-                                    src_tag_predictions=src_tag_predictions,
-                                    trg_tag_predictions=trg_tag_predictions,
-                                    attention_scores=attention_scores,
-                                    trg_symbols=trg_symbols)
+                                    attention_scores=attention_scores)
     if seed is not None:
         random.seed(seed)
     random.shuffle(examples)
@@ -277,20 +214,10 @@ def print_examples(examples, n=3, msg="Example", start="\n", end="\n"):
         for i, example in enumerate(examples[:n], 1):
             print("%s %d:" % (msg, i))
             print("  src  : %s" % " ".join(example.src))
-            if example.src_tags:
-                print("       : %s" % " ".join(example.src_tags))
-            if example.src_tag_pred is not None:
-                print("(pred.): %s" % " ".join(example.src_tag_pred))
-
             print("  tgt  : %s" % " ".join(example.trg))
-            if example.trg_tags:
-                print("       : %s" % " ".join(example.trg_tags))
+
             if example.prediction is not None:
                 print("  pred.: %s" % " ".join(example.prediction))
-            if example.trg_tag_pred is not None:
-                print("       : %s" % " ".join(example.trg_tag_pred))
-            if example.trg_symbols is not None:
-                print("       : %s" % " ".join([str(x) for x in example.trg_symbols]))
 
             print(end, end="")
 
@@ -346,16 +273,8 @@ def plot_visdom_heatmap(example, title=""):
         xmin=0.,
         xmax=1.,
         font=dict(size=8),
-        # margin=dict(t=100, r=100, b=200, l=200),
         fillarea=True,
-        # width=500,
-        # height=500,
         title=title,
-        # autosize=False,
-        # width=30*len(src_sentence),
-        # height=30*len(prediction),
-        # showlegend=False,
-        # xaxis=dict(side='top')
     )
     viz.heatmap(X=attention, opts=opts)
 
@@ -367,19 +286,9 @@ def plot_visdom_heatmap_simple(heatmap, title="", columnnames=None, rownames=Non
         columnnames=columnnames,
         rownames=rownames,
         colormap=colormap,
-        # xmin=0.,
-        # xmax=1.,
         font=dict(size=8),
-        # margin=dict(t=100, r=100, b=200, l=200),
         fillarea=True,
-        # width=500,
-        # height=500,
         title=title,
-        # autosize=False,
-        # width=30*len(src_sentence),
-        # height=30*len(prediction),
-        # showlegend=False,
-        # xaxis=dict(side='top')
     )
     viz.heatmap(X=heatmap, opts=opts)
 
@@ -429,12 +338,6 @@ def build_model(model_type=None, **kwargs):
     if model_type == 'encdec':
         from seq2seq.models.encdec import EncoderDecoder
         model = EncoderDecoder(**kwargs)
-    elif model_type == 'model1':
-        from seq2seq.models.model1 import Model1
-        model = Model1(**kwargs)
-    elif model_type =='model1gumbel':
-        from dead_code.model1gumbel import Model1Gumbel
-        model = Model1Gumbel(**kwargs)
     else:
         raise ValueError('Unknown model type')
 

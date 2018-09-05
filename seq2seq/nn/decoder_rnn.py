@@ -38,11 +38,14 @@ class DecoderRNN(nn.Module):
         self.embedding = nn.Embedding(n_words, emb_dim, padding_idx=vocab.stoi[PAD_TOKEN])
 
         if rnn_type == 'gru':
-            self.rnn = nn.GRU(emb_dim, dim, batch_first=True, dropout=dropout, num_layers=n_layers)
+            self.rnn = nn.GRU(emb_dim, dim, batch_first=True, dropout=dropout,
+                              num_layers=n_layers)
         elif rnn_type == 'rnn':
-            self.rnn = nn.RNN(emb_dim, dim, batch_first=True, dropout=dropout, num_layers=n_layers)
+            self.rnn = nn.RNN(emb_dim, dim, batch_first=True, dropout=dropout,
+                              num_layers=n_layers)
         else:
-            self.rnn = nn.LSTM(emb_dim, dim, batch_first=True, dropout=dropout, num_layers=n_layers)
+            self.rnn = nn.LSTM(emb_dim, dim, batch_first=True, dropout=dropout,
+                               num_layers=n_layers)
 
         # projected final encoder state
         self.enc_to_dec_h = []
@@ -68,7 +71,7 @@ class DecoderRNN(nn.Module):
         self.unk_idx = vocab.stoi[UNK_TOKEN]
         self.eos_idx = vocab.stoi[EOS_TOKEN]
 
-        self.criterion = nn.NLLLoss(reduce=False, size_average=False, ignore_index=self.pad_idx)
+        self.criterion = nn.NLLLoss(reduction='none', ignore_index=self.pad_idx)
 
     def init_hidden(self, encoder_final):
         """
@@ -81,11 +84,11 @@ class DecoderRNN(nn.Module):
             encoder_final_h, encoder_final_c = encoder_final
 
             for h, layer in zip(encoder_final_h, self.enc_to_dec_h):
-                h_init = F.tanh(layer(h))
+                h_init = torch.tanh(layer(h))
                 hiddens.append(h_init)
 
             for c, layer in zip(encoder_final_c, self.enc_to_dec_c):
-                c_init = F.tanh(layer(c))
+                c_init = torch.tanh(layer(c))
                 cells.append(c_init)
 
             hiddens = torch.stack(hiddens, dim=0)
@@ -95,7 +98,7 @@ class DecoderRNN(nn.Module):
         else:  # gru or rnn
             hiddens = []
             for h, layer in zip(encoder_final, self.enc_to_dec_h):
-                h_init = F.tanh(layer(h))
+                h_init = torch.tanh(layer(h))
                 hiddens.append(h_init)
 
             hidden = torch.stack(hiddens, dim=0)

@@ -50,12 +50,12 @@ class BahdanauAttention(nn.Module):
         proj_query = proj_query.transpose(0, 1)         # (B, 1, D)
 
         # this broadcasts the query over the projected memory
-        energy = F.tanh(proj_query + projected_memory)  # (B, T, D)
+        energy = torch.tanh(proj_query + projected_memory)  # (B, T, D)
         energy = self.energy_layer(energy).squeeze(2)   # (B, T)
 
         # mask illegal attention values
         pad_mask = (mask == 0)
-        energy = energy.masked_fill(pad_mask, -1e3)  # FIXME would like -inf here
+        energy = energy.masked_fill(pad_mask, -1e3)
         energy = F.softmax(energy, 1)    # (B, T)
         energy = energy.unsqueeze(1)      # (B, 1, T)
 
