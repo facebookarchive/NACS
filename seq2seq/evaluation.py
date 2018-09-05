@@ -27,24 +27,25 @@ LongTensor = torch.cuda.LongTensor if use_cuda else torch.LongTensor
 
 
 def evaluate_all(model=None, batch_iter=None, src_vocab=None, trg_vocab=None,
-                 src_vocab_tags=None, trg_vocab_tags=None, max_length=50,
-                 scan_normalize=False):
+                 max_length=50, scan_normalize=False):
 
     _, ppx, acc, _, _, _, _, _ = evaluate(
-        model=model, batch_iter=batch_iter, src_vocab=src_vocab,
-        trg_vocab=trg_vocab, src_vocab_tags=src_vocab_tags, trg_vocab_tags=trg_vocab_tags)
+        model=model, batch_iter=batch_iter,
+        src_vocab=src_vocab, trg_vocab=trg_vocab)
 
     # exact match (predicted)
     em, _, _ = evaluate_exact_match(
-        model=model, batch_iter=batch_iter, trg_vocab=trg_vocab, max_length=max_length, scan_normalize=scan_normalize)
+        model=model, batch_iter=batch_iter, trg_vocab=trg_vocab,
+        max_length=max_length, scan_normalize=scan_normalize)
 
     bleu_score = evaluate_bleu(
-        model=model, batch_iter=batch_iter, trg_vocab=trg_vocab, max_length=max_length)
+        model=model, batch_iter=batch_iter, trg_vocab=trg_vocab,
+        max_length=max_length)
 
     return acc, ppx, em, bleu_score
 
 
-def evaluate(model=None, batch_iter=None, src_vocab=None, trg_vocab=None, src_vocab_tags=None, trg_vocab_tags=None):
+def evaluate(model=None, batch_iter=None, src_vocab=None, trg_vocab=None):
     """
     Evaluate perplexity, accuracy (with teacher forcing), exact match (with teacher forcing)
 
@@ -74,17 +75,9 @@ def evaluate(model=None, batch_iter=None, src_vocab=None, trg_vocab=None, src_vo
     n_correct = 0
     n_seqs = 0
     n_seqs_correct = 0
-    n_src_tags = 0
-    n_src_tags_correct = 0
-    n_trg_tags = 0
-    n_trg_tags_correct = 0
 
     pad_idx_src = src_vocab.stoi[PAD_TOKEN]
-    pad_idx_tags_src = src_vocab_tags.stoi[PAD_TOKEN] if src_vocab_tags is not None else None
     pad_idx_trg = trg_vocab.stoi[PAD_TOKEN]
-    pad_idx_tags_trg = trg_vocab_tags.stoi[PAD_TOKEN] if trg_vocab_tags is not None else None
-
-    # criterion = nn.NLLLoss(reduce=True, size_average=False, ignore_index=pad_idx_trg)
 
     model.eval()
 
@@ -92,8 +85,6 @@ def evaluate(model=None, batch_iter=None, src_vocab=None, trg_vocab=None, src_vo
 
         src_var, src_lengths = batch.src
         trg_var, trg_lengths = batch.trg
-        src_tags_var = batch.src_tags if hasattr(batch, 'src_tags') else None
-        trg_tags_var = batch.trg_tags if hasattr(batch, 'trg_tags') else None
 
         src_lengths = src_lengths.view(-1).tolist()
         trg_lengths = trg_lengths.view(-1).tolist()
@@ -104,10 +95,9 @@ def evaluate(model=None, batch_iter=None, src_vocab=None, trg_vocab=None, src_vo
         n_seqs += len(trg_lengths)
 
         # it does not matter for exact match
-        result = model(src_var=src_var, src_lengths=src_lengths, trg_var=trg_var, trg_lengths=trg_lengths,
+        result = model(src_var=src_var, src_lengths=src_lengths,
+                       trg_var=trg_var, trg_lengths=trg_lengths,
                        max_length=time_steps, tf_ratio=1.,
-                       src_tags_var=src_tags_var, trg_tags_var=trg_tags_var,
-                       predict_src_tags=predict_src_tags, predict_trg_tags=predict_trg_tags,
                        return_attention=False, return_states=False)
 
         predictions = result['preds']
@@ -115,14 +105,8 @@ def evaluate(model=None, batch_iter=None, src_vocab=None, trg_vocab=None, src_vo
         loss_dict = result['loss']
         result = None
 
-        # log_probs = result['log_probs']
-        # voc_size = log_probs.size(2)
-
         # loss
-        # log_probs_2d = log_probs.view(batch_size * time_steps, voc_size)
-        # total_loss += loss_dict['loss'].data.cpu().tolist()[0]
         total_loss += loss_dict['loss'].data.cpu().tolist()
-        # criterion(log_probs_2d, trg_var.view(-1))
 
         # token accuracy
         correct = predictions.eq(trg_var.data).long()
@@ -211,7 +195,8 @@ def evaluate_exact_match(model=None, batch_iter=None, trg_vocab=None, max_length
             time_steps = time_steps + 5
 
         # predictions at time step t-1 are the inputs for time step t
-        # we stop predicting after time_steps since continuing would not result in a match anymore
+        # we stop predicting after time_steps since continuing would not result
+        #  in a match anymore
         result = model(src_var=src_var, src_lengths=src_lengths, max_length=time_steps,
                        src_tags_var=src_tags_var, trg_tags_var=trg_tags_var)
 
@@ -228,7 +213,7 @@ def evaluate_exact_match(model=None, batch_iter=None, trg_vocab=None, max_length
                 #     continue  # length wrong
                 eos_es = np.where(prediction == eos_idx)[0]
                 if len(eos_es) > 0:
-                    prediction = prediction[:eos_es[0]]  # prediction without EOS
+                    prediction = prediction[:eos_es[0]]  # prediction w/o EOS
 
                 tokens = [trg_vocab.itos[x] for x in prediction]
                 prediction_str = ' '.join(tokens)
@@ -346,15 +331,17 @@ def evaluate_bleu(model=None, batch_iter=None, trg_vocab=None, max_length=0):
     return bleu_score
 
 
-def evaluate_bleu_external(ref_path=None, pred_path=None, multi_bleu_script="seq2seq/lib/multi-bleu.perl"):
+def evaluate_bleu_external(ref_path=None, pred_path=None,
+                           cmd_path="sacrebleu", tokenize="none", lc=False):
     """
     Get external BLEU score
     """
-    cmd = "%s %s < %s" % (multi_bleu_script, ref_path, pred_path)
+    lc = "-lc " if lc else ""
+    cmd_t = "{} {} {} -b --tokenize {} -m {} < {}"
+    cmd = cmd_t.format(cmd_path, ref_path, lc, tokenize, 'bleu', pred_path)
     bleu_output = subprocess.check_output(cmd, shell=True, stderr=None)
-    bleu_output = bleu_output.strip().decode('utf-8')
+    bleu_output = bleu_output.strip().decode('utf-8').strip()
     logger.info(bleu_output)
-    m = re.search("BLEU = (.+?),", bleu_output)
-    bleu_score = float(m.group(1))
+    bleu_score = float(bleu_output)
     return bleu_score
 

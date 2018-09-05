@@ -293,9 +293,6 @@ def train_loop(model_type=None, enc_type=None, dec_type=None,
 
                 # print train examples
                 train_examples = get_random_examples(batch, fields, predictions=predictions,
-                                                     src_tag_predictions=src_tag_predictions,
-                                                     trg_tag_predictions=trg_tag_predictions,
-                                                     trg_symbols=trg_symbols,
                                                      n=n_val_examples)
                 print_examples(train_examples, msg="Train example", n=n_val_examples)
 
@@ -316,8 +313,7 @@ def train_loop(model_type=None, enc_type=None, dec_type=None,
                                                  sort_within_batch=True, shuffle=True, sort_key=lambda x: len(x.src),
                                                  device=device)
                     example_batch = next(iter(example_iter))
-                    result = predict_single_batch(model, example_batch, max_length=max_length, return_attention=True,
-                                                  predict_src_tags=predict_src_tags, predict_trg_tags=predict_trg_tags)
+                    result = predict_single_batch(model, example_batch, max_length=max_length, return_attention=True)
                     predictions = result['preds']
                     attention_scores = result['att_scores'] if 'att_scores' in result else None
                     src_tag_preds = result['src_tag_preds'] if 'src_tag_preds' in result else None
@@ -439,8 +435,6 @@ def train_loop(model_type=None, enc_type=None, dec_type=None,
                     test_acc, test_ppx, test_exact_match, test_bleu = evaluate_all(
                         model=model, batch_iter=test_iter,
                         src_vocab=src_field.vocab, trg_vocab=trg_field.vocab,
-                        src_vocab_tags=src_tags_field.vocab if src_tags_field is not None else None,
-                        trg_vocab_tags=trg_tags_field.vocab if trg_tags_field is not None else None,
                         max_length=max_length, scan_normalize=scan_normalize)
 
                     # test set - predict and save to disk
@@ -448,11 +442,13 @@ def train_loop(model_type=None, enc_type=None, dec_type=None,
                         logger.info("Getting external test BLEU")
                         output_path = os.path.join(workdir, "output.test.iter%08d.%s" % (iter_i, trg))
                         trg_path = os.path.join(root, "%s.%s" % (test, trg))
-                        test_bleu = predict_and_get_bleu(dataset=test_data, model=model, output_path=output_path,
-                                                              max_length=max_length, device=device, trg_path=trg_path,
-                                                              src_vocab=src_field.vocab, trg_vocab=trg_field.vocab,
-                                                              debpe=debpe)
-                        logger.info("Test multi-bleu: %f" % test_bleu)
+                        test_bleu = predict_and_get_bleu(
+                            dataset=test_data, model=model,
+                            output_path=output_path, max_length=max_length,
+                            device=device, trg_path=trg_path,
+                            src_vocab=src_field.vocab,
+                            trg_vocab=trg_field.vocab, debpe=debpe)
+                        logger.info("Test bleu: %f" % test_bleu)
 
                     log_dict['test_acc'] = test_acc
                     log_dict['test_ppx'] = test_ppx
