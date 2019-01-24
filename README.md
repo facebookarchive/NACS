@@ -62,3 +62,7 @@ usage: __main__.py [-h] --mode {train,test} [--model_type {encdec,model1}]
                    [--num_composed_commands NUM_COMPOSED_COMMANDS]
                    [--ctx_dim CTX_DIM]
 ```
+
+## License
+
+NACS is CC-NC licensed, as found in the LICENSE file.
